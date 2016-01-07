@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['sdlwindowdeleter',['SDLWindowDeleter',['../struct_s_d_l_window_deleter.html',1,'']]]
+  ['pyramidasset',['PyramidAsset',['../class_pyramid_asset.html',1,'']]]
 ];

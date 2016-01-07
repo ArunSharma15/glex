@@ -11,6 +11,7 @@
 
 #include "common.h"
 #include "GameWorld.h"
+#include "Camera.h"
 
 /*
  * SDL timers run in separate threads.  In the timer thread
@@ -35,11 +36,13 @@ struct SDLWindowDeleter {
 };
 
 void Draw(const std::shared_ptr<SDL_Window> window, const std::shared_ptr<GameWorld> game_world) {
+ 
+  
   glClearColor(0.0f, 0.5f, 0.5f, 0.5f);
   glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT);
 
   game_world->Draw();
-
+ 
   // Don't forget to swap the buffers
   SDL_GL_SwapWindow(window.get());
 }
@@ -140,17 +143,20 @@ ApplicationMode ParseOptions (int argc, char ** argv) {
 int main(int argc, char ** argv) {
   Uint32 delay = 1000/60; // in milliseconds
 
+  auto cam = std::make_shared<Camera>();
   auto mode = ParseOptions(argc, argv);
   auto window = InitWorld();
   auto game_world = std::make_shared<GameWorld>(mode);
   if(!window) {
     SDL_Quit();
   }
-
+	
+  
+	
   // Call the function "tick" every delay milliseconds
   SDL_AddTimer(delay, tick, NULL);
 
-  // Add the main event loop
+// Add the main event loop
   SDL_Event event;
   while (SDL_WaitEvent(&event)) {
     switch (event.type) {
@@ -158,11 +164,29 @@ int main(int argc, char ** argv) {
       SDL_Quit();
       break;
     case SDL_USEREVENT:
-      Draw(window, game_world);
-
+      Draw(window,game_world);
+      break;
+    case SDL_KEYDOWN:			
+    switch (event.key.keysym.sym) {
+    case SDLK_w:			//w
+      	std::cout << "W" << std::endl;
+        cam -> CameraKeys('w');
+      break;
+    case SDLK_a:			//a
+      	std::cout << "A" << std::endl;
+      	cam -> CameraKeys('a');
+      break;
+    case SDLK_s:			//s
+	std::cout << "S" << std::endl;
+	cam -> CameraKeys('s');
+      break;
+    case SDLK_d:			//d
+      	std::cout << "D" << std::endl;
+      	cam -> CameraKeys('d');
       break;
     default:
       break;
+      }
     }
   }
 }

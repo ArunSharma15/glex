@@ -1,20 +1,21 @@
 #include "CubeAsset.h"
-
-CubeAsset::CubeAsset() {
+#include "Camera.h"
+#include <glm/ext.hpp>
+CubeAsset::CubeAsset(int x, int y, int z) {
   // model coordinates, origin at centre.
   GLfloat vertex_buffer [] {
-    -0.5, -0.5, -0.5 //0
-    ,-0.5, 0.5, -0.5 //1
-
-    , 0.5, -0.5,-0.5 //2
-    , 0.5,  0.5,-0.5 //3
     
-    ,-0.5,  0.5, 0.5 //4
-    , 0.5,  0.5, 0.5 //5
-
-    , 0.5, -0.5, 0.5 //6
-    ,-0.5, -0.5, 0.5 //7
-
+   -0.5+x,-0.5+y,-0.5+z,
+   -0.5+x, 0.5+y,-0.5+z,
+     
+    0.5+x,-0.5+y,-0.5+z,
+    0.5+x, 0.5+y,-0.5+z,
+   
+   -0.5+x, 0.5+y, 0.5+z,
+    0.5+x, 0.5+y, 0.5+z,
+   
+    0.5+x,-0.5+y, 0.5+z,
+   -0.5+x,-0.5+y, 0.5+z
     
 
   };
@@ -49,7 +50,7 @@ CubeAsset::CubeAsset() {
 
   // immediately bind the buffer and transfer the data
   glBindBuffer(GL_ARRAY_BUFFER, vertex_buffer_token);
-  glBufferData(GL_ARRAY_BUFFER, sizeof(GLfloat) * 12, vertex_buffer, GL_STATIC_DRAW);
+  glBufferData(GL_ARRAY_BUFFER, sizeof(GLfloat) * 72, vertex_buffer, GL_STATIC_DRAW);
 
   glGenBuffers(1, &element_buffer_token);
   glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, element_buffer_token);
@@ -79,6 +80,11 @@ void CubeAsset::Draw(GLuint program_token) {
     std::cerr << "Drawing Cube with invalid program" << std::endl;
     return;
   }
+  
+  //glm::mat4 model      = glm::mat4(1.0f);
+  //model = glm::rotate(model, 45.0f, glm::vec3(1.0f, 0.0f, 0.0f));
+  //glUniformMatrix4fv(0, 1, GL_FALSE, &model[0][0]);
+  
   GLint validation_ok;
   glValidateProgram(program_token);
   glGetProgramiv(program_token, GL_VALIDATE_STATUS, &validation_ok);

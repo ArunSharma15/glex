@@ -13,6 +13,7 @@
 #include "common.h"
 #include "GameAsset.h"
 
+
 /**
  * GameAssetManager is a container for GameAssets.  It also provides utility
  * functions to to create a simple OpenGL program that can be used to draw a

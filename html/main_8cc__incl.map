@@ -1,7 +1,9 @@
 <map id="src/main.cc" name="src/main.cc">
-<area shape="rect" id="node8" href="$common_8h.html" title="common.h" alt="" coords="1149,229,1231,256"/>
-<area shape="rect" id="node9" href="$_game_world_8h.html" title="GameWorld.h" alt="" coords="652,80,755,107"/>
-<area shape="rect" id="node10" href="$_game_asset_manager_8h.html" title="GameAssetManager.h" alt="" coords="763,155,915,181"/>
-<area shape="rect" id="node16" href="$_cube_asset_8h.html" title="CubeAsset.h" alt="" coords="546,155,645,181"/>
-<area shape="rect" id="node15" href="$_game_asset_8h.html" title="GameAsset.h" alt="" coords="589,229,692,256"/>
+<area shape="rect" id="node8" href="$common_8h.html" title="common.h" alt="" coords="1199,229,1282,256"/>
+<area shape="rect" id="node9" href="$_game_world_8h.html" title="GameWorld.h" alt="" coords="673,80,776,107"/>
+<area shape="rect" id="node20" href="$_camera_8h.html" title="Camera.h" alt="" coords="888,80,967,107"/>
+<area shape="rect" id="node10" href="$_game_asset_manager_8h.html" title="GameAssetManager.h" alt="" coords="851,155,1003,181"/>
+<area shape="rect" id="node16" href="$_cube_asset_8h.html" title="CubeAsset.h" alt="" coords="542,155,641,181"/>
+<area shape="rect" id="node19" href="$_pyramid_asset_8h.html" title="PyramidAsset.h" alt="" coords="386,155,501,181"/>
+<area shape="rect" id="node15" href="$_game_asset_8h.html" title="GameAsset.h" alt="" coords="629,229,732,256"/>
 </map>
