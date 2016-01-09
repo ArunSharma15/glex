@@ -1,6 +1,6 @@
 var NAVTREE =
 [
-  [ "GL Egs", "index.html", [
+  [ "CI224 - Assignment 1 - Arun Sharma", "index.html", [
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],

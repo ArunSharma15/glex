@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.10"/>
-<title>GL Egs: src/GameAssetManager.h Source File</title>
+<title>CI224 - Assignment 1 - Arun Sharma: src/GameAssetManager.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -31,8 +31,9 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">GL Egs
+   <div id="projectname">CI224 - Assignment 1 - Arun Sharma
    </div>
+   <div id="projectbrief">&#39;Lite&#39; Minecraft clone implemented with C++11/OpenGl.</div>
   </td>
  </tr>
  </tbody>
@@ -133,24 +134,29 @@ $(document).ready(function(){initNavTree('_game_asset_manager_8h_source.html',''
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_game_asset_manager.html#a32837132bd70a9a9ed537323c2d3d886">Draw</a>();</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  GLuint CreateGLProgram(std::string &amp;, std::string &amp;);</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  GLuint CreateGLESShader(GLenum, std::string &amp;);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  GLuint <a class="code" href="class_game_asset_manager.html#abec45b44a8b35ad2d7d817ba10e0dd8d">CreateGLProgram</a>(std::string &amp;, std::string &amp;);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  GLuint <a class="code" href="class_game_asset_manager.html#a1a1e5c07f941e8d3fda40d9442ac7037">CreateGLESShader</a>(GLenum, std::string &amp;);</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <span class="comment">// As this is private and we&#39;re writing to the GPU, we will use raw pointers.</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  std::pair&lt;GLchar *, GLint&gt;  ReadShader(std::string &amp;);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  std::pair&lt;GLchar *, GLint&gt;  <a class="code" href="class_game_asset_manager.html#a23b124a213308a68a882727127601c97">ReadShader</a>(std::string &amp;);</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  <span class="comment">// The internal scene graph is a simple list.</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  std::vector&lt;std::shared_ptr&lt;GameAsset&gt;&gt; draw_list;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  GLuint program_token;</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="class_game_asset_manager.html#a671cddd92f1de4186c582fe0c4297b7d">   39</a></span>&#160;  std::vector&lt;std::shared_ptr&lt;GameAsset&gt;&gt; <a class="code" href="class_game_asset_manager.html#a671cddd92f1de4186c582fe0c4297b7d">draw_list</a>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="class_game_asset_manager.html#ad7bab17862e06ca692289f934b40548b">   40</a></span>&#160;  GLuint <a class="code" href="class_game_asset_manager.html#ad7bab17862e06ca692289f934b40548b">program_token</a>;</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;};</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#endif // GAMEASSETMANAGER_H</span></div>
+<div class="ttc" id="class_game_asset_manager_html_a1a1e5c07f941e8d3fda40d9442ac7037"><div class="ttname"><a href="class_game_asset_manager.html#a1a1e5c07f941e8d3fda40d9442ac7037">GameAssetManager::CreateGLESShader</a></div><div class="ttdeci">GLuint CreateGLESShader(GLenum, std::string &amp;)</div><div class="ttdef"><b>Definition:</b> <a href="_game_asset_manager_8cc_source.html#l00112">GameAssetManager.cc:112</a></div></div>
 <div class="ttc" id="class_game_asset_manager_html_ad3de8ff00d55ba04728b1de8213b2349"><div class="ttname"><a href="class_game_asset_manager.html#ad3de8ff00d55ba04728b1de8213b2349">GameAssetManager::AddAsset</a></div><div class="ttdeci">void AddAsset(std::shared_ptr&lt; GameAsset &gt;)</div><div class="ttdef"><b>Definition:</b> <a href="_game_asset_manager_8cc_source.html#l00063">GameAssetManager.cc:63</a></div></div>
 <div class="ttc" id="class_game_asset_manager_html_a1270bd61ecbcca563f079803e40c9b77"><div class="ttname"><a href="class_game_asset_manager.html#a1270bd61ecbcca563f079803e40c9b77">GameAssetManager::~GameAssetManager</a></div><div class="ttdeci">virtual ~GameAssetManager()</div><div class="ttdef"><b>Definition:</b> <a href="_game_asset_manager_8cc_source.html#l00032">GameAssetManager.cc:32</a></div></div>
 <div class="ttc" id="class_game_asset_manager_html_aaa0d58e276cc10ad91a7457085598a71"><div class="ttname"><a href="class_game_asset_manager.html#aaa0d58e276cc10ad91a7457085598a71">GameAssetManager::GameAssetManager</a></div><div class="ttdeci">GameAssetManager(ApplicationMode)</div><div class="ttdef"><b>Definition:</b> <a href="_game_asset_manager_8cc_source.html#l00007">GameAssetManager.cc:7</a></div></div>
 <div class="ttc" id="class_game_asset_manager_html"><div class="ttname"><a href="class_game_asset_manager.html">GameAssetManager</a></div><div class="ttdef"><b>Definition:</b> <a href="_game_asset_manager_8h_source.html#l00022">GameAssetManager.h:22</a></div></div>
+<div class="ttc" id="class_game_asset_manager_html_a23b124a213308a68a882727127601c97"><div class="ttname"><a href="class_game_asset_manager.html#a23b124a213308a68a882727127601c97">GameAssetManager::ReadShader</a></div><div class="ttdeci">std::pair&lt; GLchar *, GLint &gt; ReadShader(std::string &amp;)</div><div class="ttdef"><b>Definition:</b> <a href="_game_asset_manager_8cc_source.html#l00153">GameAssetManager.cc:153</a></div></div>
+<div class="ttc" id="class_game_asset_manager_html_a671cddd92f1de4186c582fe0c4297b7d"><div class="ttname"><a href="class_game_asset_manager.html#a671cddd92f1de4186c582fe0c4297b7d">GameAssetManager::draw_list</a></div><div class="ttdeci">std::vector&lt; std::shared_ptr&lt; GameAsset &gt; &gt; draw_list</div><div class="ttdef"><b>Definition:</b> <a href="_game_asset_manager_8h_source.html#l00039">GameAssetManager.h:39</a></div></div>
 <div class="ttc" id="common_8h_html_add86e7c88dd109abea3f708b422f31f0"><div class="ttname"><a href="common_8h.html#add86e7c88dd109abea3f708b422f31f0">ApplicationMode</a></div><div class="ttdeci">ApplicationMode</div><div class="ttdef"><b>Definition:</b> <a href="common_8h_source.html#l00012">common.h:12</a></div></div>
 <div class="ttc" id="class_game_asset_manager_html_ac72678a4ad5378c685aa6bae84a4e712"><div class="ttname"><a href="class_game_asset_manager.html#ac72678a4ad5378c685aa6bae84a4e712">GameAssetManager::operator=</a></div><div class="ttdeci">void operator=(GameAssetManager const &amp;)</div><div class="ttdef"><b>Definition:</b> <a href="_game_asset_manager_8cc_source.html#l00056">GameAssetManager.cc:56</a></div></div>
+<div class="ttc" id="class_game_asset_manager_html_ad7bab17862e06ca692289f934b40548b"><div class="ttname"><a href="class_game_asset_manager.html#ad7bab17862e06ca692289f934b40548b">GameAssetManager::program_token</a></div><div class="ttdeci">GLuint program_token</div><div class="ttdef"><b>Definition:</b> <a href="_game_asset_manager_8h_source.html#l00040">GameAssetManager.h:40</a></div></div>
 <div class="ttc" id="_game_asset_8h_html"><div class="ttname"><a href="_game_asset_8h.html">GameAsset.h</a></div></div>
+<div class="ttc" id="class_game_asset_manager_html_abec45b44a8b35ad2d7d817ba10e0dd8d"><div class="ttname"><a href="class_game_asset_manager.html#abec45b44a8b35ad2d7d817ba10e0dd8d">GameAssetManager::CreateGLProgram</a></div><div class="ttdeci">GLuint CreateGLProgram(std::string &amp;, std::string &amp;)</div><div class="ttdef"><b>Definition:</b> <a href="_game_asset_manager_8cc_source.html#l00083">GameAssetManager.cc:83</a></div></div>
 <div class="ttc" id="common_8h_html"><div class="ttname"><a href="common_8h.html">common.h</a></div></div>
 <div class="ttc" id="class_game_asset_manager_html_a32837132bd70a9a9ed537323c2d3d886"><div class="ttname"><a href="class_game_asset_manager.html#a32837132bd70a9a9ed537323c2d3d886">GameAssetManager::Draw</a></div><div class="ttdeci">void Draw()</div><div class="ttdef"><b>Definition:</b> <a href="_game_asset_manager_8cc_source.html#l00070">GameAssetManager.cc:70</a></div></div>
 </div><!-- fragment --></div><!-- contents -->

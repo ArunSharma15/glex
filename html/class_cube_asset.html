@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.10"/>
-<title>GL Egs: CubeAsset Class Reference</title>
+<title>CI224 - Assignment 1 - Arun Sharma: CubeAsset Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -31,8 +31,9 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">GL Egs
+   <div id="projectname">CI224 - Assignment 1 - Arun Sharma
    </div>
+   <div id="projectbrief">&#39;Lite&#39; Minecraft clone implemented with C++11/OpenGl.</div>
   </td>
  </tr>
  </tbody>
@@ -106,6 +107,7 @@ $(document).ready(function(){initNavTree('class_cube_asset.html','');});
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_cube_asset-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">CubeAsset Class Reference</div>  </div>
@@ -138,10 +140,20 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ab3ab9a5da82cbf8537a28652410093b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1af568486056e254ffcf98fd99947bfe"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cube_asset.html#a1af568486056e254ffcf98fd99947bfe">Draw</a> (GLuint)</td></tr>
 <tr class="separator:a1af568486056e254ffcf98fd99947bfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:ac66c2ec869f392515dad4ebda1fe4792"><td class="memItemLeft" align="right" valign="top">GLuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cube_asset.html#ac66c2ec869f392515dad4ebda1fe4792">element_buffer_length</a></td></tr>
+<tr class="separator:ac66c2ec869f392515dad4ebda1fe4792"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31bd098f60e2c24988316a9cc9335987"><td class="memItemLeft" align="right" valign="top">GLuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cube_asset.html#a31bd098f60e2c24988316a9cc9335987">vertex_buffer_token</a></td></tr>
+<tr class="separator:a31bd098f60e2c24988316a9cc9335987"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fae699256e7c5633a8174a93ca8a0ec"><td class="memItemLeft" align="right" valign="top">GLuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cube_asset.html#a4fae699256e7c5633a8174a93ca8a0ec">element_buffer_token</a></td></tr>
+<tr class="separator:a4fae699256e7c5633a8174a93ca8a0ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p>Definition at line <a class="el" href="_cube_asset_8h_source.html#l00012">12</a> of file <a class="el" href="_cube_asset_8h_source.html">CubeAsset.h</a>.</p>
+<div class="textblock"><p>Cube Asset Class - Resonsible for storing structure of Cube class and drawing. </p>
+
+<p>Definition at line <a class="el" href="_cube_asset_8h_source.html#l00015">15</a> of file <a class="el" href="_cube_asset_8h_source.html">CubeAsset.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a615ed01cd3abb99e9fe55087a8a4ef0a"></a>
 <div class="memitem">
@@ -172,8 +184,10 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Constructor - Intialise vertices of cube </p>
+<p>x,y,z positions designed to modify positions of the cube(s) </p>
 
-<p>Definition at line <a class="el" href="_cube_asset_8cc_source.html#l00004">4</a> of file <a class="el" href="_cube_asset_8cc_source.html">CubeAsset.cc</a>.</p>
+<p>Definition at line <a class="el" href="_cube_asset_8cc_source.html#l00005">5</a> of file <a class="el" href="_cube_asset_8cc_source.html">CubeAsset.cc</a>.</p>
 
 </div>
 </div>
@@ -190,7 +204,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_cube_asset_8cc_source.html#l00060">60</a> of file <a class="el" href="_cube_asset_8cc_source.html">CubeAsset.cc</a>.</p>
+<p>Definition at line <a class="el" href="_cube_asset_8cc_source.html#l00061">61</a> of file <a class="el" href="_cube_asset_8cc_source.html">CubeAsset.cc</a>.</p>
 
 </div>
 </div>
@@ -219,7 +233,78 @@ Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="class_game_asset.html#a961aa51ca0a9961fc584c0b5d5431300">GameAsset</a>.</p>
 
-<p>Definition at line <a class="el" href="_cube_asset_8cc_source.html#l00078">78</a> of file <a class="el" href="_cube_asset_8cc_source.html">CubeAsset.cc</a>.</p>
+<p>Definition at line <a class="el" href="_cube_asset_8cc_source.html#l00079">79</a> of file <a class="el" href="_cube_asset_8cc_source.html">CubeAsset.cc</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="ac66c2ec869f392515dad4ebda1fe4792"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLuint CubeAsset::element_buffer_length</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Resonsible for drawing and transferring information about Cube </p>
+
+<p>Definition at line <a class="el" href="_cube_asset_8h_source.html#l00022">22</a> of file <a class="el" href="_cube_asset_8h_source.html">CubeAsset.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4fae699256e7c5633a8174a93ca8a0ec"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLuint CubeAsset::element_buffer_token</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Three numbers (or each row) create a triangle. </p>
+
+<p>Definition at line <a class="el" href="_cube_asset_8h_source.html#l00023">23</a> of file <a class="el" href="_cube_asset_8h_source.html">CubeAsset.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a31bd098f60e2c24988316a9cc9335987"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLuint CubeAsset::vertex_buffer_token</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Store formed triangles which comprise cube</p>
+<p>Each row defines a single vertex (or edge) of the cube in 3d space (x,y&amp;z positions). </p>
+
+<p>Definition at line <a class="el" href="_cube_asset_8h_source.html#l00023">23</a> of file <a class="el" href="_cube_asset_8h_source.html">CubeAsset.h</a>.</p>
 
 </div>
 </div>

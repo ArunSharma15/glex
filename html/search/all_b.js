@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['_7ecubeasset',['~CubeAsset',['../class_cube_asset.html#ab3ab9a5da82cbf8537a28652410093b1',1,'CubeAsset']]],
-  ['_7egameassetmanager',['~GameAssetManager',['../class_game_asset_manager.html#a1270bd61ecbcca563f079803e40c9b77',1,'GameAssetManager']]],
-  ['_7epyramidasset',['~PyramidAsset',['../class_pyramid_asset.html#afb388a196f43a3808b2d4f6fdb89ee84',1,'PyramidAsset']]]
+  ['scale',['SCALE',['../common_8h.html#add86e7c88dd109abea3f708b422f31f0a593be05a10070b4e7e0856e20590eaaf',1,'common.h']]],
+  ['sdlwindowdeleter',['SDLWindowDeleter',['../struct_s_d_l_window_deleter.html',1,'']]]
 ];

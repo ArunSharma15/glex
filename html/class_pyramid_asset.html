@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.10"/>
-<title>GL Egs: PyramidAsset Class Reference</title>
+<title>CI224 - Assignment 1 - Arun Sharma: PyramidAsset Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -31,8 +31,9 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">GL Egs
+   <div id="projectname">CI224 - Assignment 1 - Arun Sharma
    </div>
+   <div id="projectbrief">&#39;Lite&#39; Minecraft clone implemented with C++11/OpenGl.</div>
   </td>
  </tr>
  </tbody>
@@ -106,6 +107,8 @@ $(document).ready(function(){initNavTree('class_pyramid_asset.html','');});
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_pyramid_asset-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">PyramidAsset Class Reference</div>  </div>
@@ -138,6 +141,20 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:afb388a196f43a3808b2d4f6fdb89ee84"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaea45da4956d79ec9ab96e9d0ccef3fe"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pyramid_asset.html#aaea45da4956d79ec9ab96e9d0ccef3fe">Draw</a> (GLuint)</td></tr>
 <tr class="separator:aaea45da4956d79ec9ab96e9d0ccef3fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a34350044042e0098446dc9e0a260cb70"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pyramid_asset.html#a34350044042e0098446dc9e0a260cb70">checkError</a> (std::string file, int line)</td></tr>
+<tr class="separator:a34350044042e0098446dc9e0a260cb70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a5566105859271b493eab3b5f9c02f866"><td class="memItemLeft" align="right" valign="top">GLuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pyramid_asset.html#a5566105859271b493eab3b5f9c02f866">element_buffer_length</a></td></tr>
+<tr class="separator:a5566105859271b493eab3b5f9c02f866"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54d9cec42bc77d07a66e6c1cd55049b0"><td class="memItemLeft" align="right" valign="top">GLuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pyramid_asset.html#a54d9cec42bc77d07a66e6c1cd55049b0">vertex_buffer_token</a></td></tr>
+<tr class="separator:a54d9cec42bc77d07a66e6c1cd55049b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f7e2f50904d2941e33df8eb7f5f9c2d"><td class="memItemLeft" align="right" valign="top">GLuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pyramid_asset.html#a6f7e2f50904d2941e33df8eb7f5f9c2d">element_buffer_token</a></td></tr>
+<tr class="separator:a6f7e2f50904d2941e33df8eb7f5f9c2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
@@ -172,8 +189,9 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Pyramid Class - Responsible for spawning a pyramid to the block world. X,Y,Z coordinates for each pyramid. </p>
 
-<p>Definition at line <a class="el" href="_pyramid_asset_8cc_source.html#l00004">4</a> of file <a class="el" href="_pyramid_asset_8cc_source.html">PyramidAsset.cc</a>.</p>
+<p>Definition at line <a class="el" href="_pyramid_asset_8cc_source.html#l00008">8</a> of file <a class="el" href="_pyramid_asset_8cc_source.html">PyramidAsset.cc</a>.</p>
 
 </div>
 </div>
@@ -190,11 +208,47 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_pyramid_asset_8cc_source.html#l00048">48</a> of file <a class="el" href="_pyramid_asset_8cc_source.html">PyramidAsset.cc</a>.</p>
+<p>Definition at line <a class="el" href="_pyramid_asset_8cc_source.html#l00052">52</a> of file <a class="el" href="_pyramid_asset_8cc_source.html">PyramidAsset.cc</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a34350044042e0098446dc9e0a260cb70"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PyramidAsset::checkError </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>file</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>line</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_pyramid_asset_8cc_source.html#l00063">63</a> of file <a class="el" href="_pyramid_asset_8cc_source.html">PyramidAsset.cc</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="aaea45da4956d79ec9ab96e9d0ccef3fe"></a>
 <div class="memitem">
 <div class="memproto">
@@ -219,7 +273,74 @@ Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="class_game_asset.html#a961aa51ca0a9961fc584c0b5d5431300">GameAsset</a>.</p>
 
-<p>Definition at line <a class="el" href="_pyramid_asset_8cc_source.html#l00066">66</a> of file <a class="el" href="_pyramid_asset_8cc_source.html">PyramidAsset.cc</a>.</p>
+<p>Definition at line <a class="el" href="_pyramid_asset_8cc_source.html#l00071">71</a> of file <a class="el" href="_pyramid_asset_8cc_source.html">PyramidAsset.cc</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a5566105859271b493eab3b5f9c02f866"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLuint PyramidAsset::element_buffer_length</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_pyramid_asset_8h_source.html#l00020">20</a> of file <a class="el" href="_pyramid_asset_8h_source.html">PyramidAsset.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6f7e2f50904d2941e33df8eb7f5f9c2d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLuint PyramidAsset::element_buffer_token</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_pyramid_asset_8h_source.html#l00021">21</a> of file <a class="el" href="_pyramid_asset_8h_source.html">PyramidAsset.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a54d9cec42bc77d07a66e6c1cd55049b0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLuint PyramidAsset::vertex_buffer_token</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_pyramid_asset_8h_source.html#l00021">21</a> of file <a class="el" href="_pyramid_asset_8h_source.html">PyramidAsset.h</a>.</p>
 
 </div>
 </div>

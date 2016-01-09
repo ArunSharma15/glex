@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.10"/>
-<title>GL Egs: GameAssetManager Class Reference</title>
+<title>CI224 - Assignment 1 - Arun Sharma: GameAssetManager Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -31,8 +31,9 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">GL Egs
+   <div id="projectname">CI224 - Assignment 1 - Arun Sharma
    </div>
+   <div id="projectbrief">&#39;Lite&#39; Minecraft clone implemented with C++11/OpenGl.</div>
   </td>
  </tr>
  </tbody>
@@ -106,6 +107,8 @@ $(document).ready(function(){initNavTree('class_game_asset_manager.html','');});
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_game_asset_manager-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">GameAssetManager Class Reference</div>  </div>
@@ -130,6 +133,22 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ad3de8ff00d55ba04728b1de8213b2349"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a32837132bd70a9a9ed537323c2d3d886"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_asset_manager.html#a32837132bd70a9a9ed537323c2d3d886">Draw</a> ()</td></tr>
 <tr class="separator:a32837132bd70a9a9ed537323c2d3d886"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:abec45b44a8b35ad2d7d817ba10e0dd8d"><td class="memItemLeft" align="right" valign="top">GLuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_asset_manager.html#abec45b44a8b35ad2d7d817ba10e0dd8d">CreateGLProgram</a> (std::string &amp;, std::string &amp;)</td></tr>
+<tr class="separator:abec45b44a8b35ad2d7d817ba10e0dd8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a1e5c07f941e8d3fda40d9442ac7037"><td class="memItemLeft" align="right" valign="top">GLuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_asset_manager.html#a1a1e5c07f941e8d3fda40d9442ac7037">CreateGLESShader</a> (GLenum, std::string &amp;)</td></tr>
+<tr class="separator:a1a1e5c07f941e8d3fda40d9442ac7037"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23b124a213308a68a882727127601c97"><td class="memItemLeft" align="right" valign="top">std::pair&lt; GLchar *, GLint &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_asset_manager.html#a23b124a213308a68a882727127601c97">ReadShader</a> (std::string &amp;)</td></tr>
+<tr class="separator:a23b124a213308a68a882727127601c97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a671cddd92f1de4186c582fe0c4297b7d"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_game_asset.html">GameAsset</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_asset_manager.html#a671cddd92f1de4186c582fe0c4297b7d">draw_list</a></td></tr>
+<tr class="separator:a671cddd92f1de4186c582fe0c4297b7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7bab17862e06ca692289f934b40548b"><td class="memItemLeft" align="right" valign="top">GLuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_asset_manager.html#ad7bab17862e06ca692289f934b40548b">program_token</a></td></tr>
+<tr class="separator:ad7bab17862e06ca692289f934b40548b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="class_game_asset_manager.html">GameAssetManager</a> is a container for GameAssets. It also provides utility functions to to create a simple OpenGL program that can be used to draw a simple <a class="el" href="class_game_asset.html">GameAsset</a>. </p>
@@ -160,6 +179,18 @@ Public Member Functions</h2></td></tr>
 <p>Creates a <a class="el" href="class_game_asset_manager.html">GameAssetManager</a> to load the correct shaders based on the ApplicationMode. </p>
 
 <p>Definition at line <a class="el" href="_game_asset_manager_8cc_source.html#l00007">7</a> of file <a class="el" href="_game_asset_manager_8cc_source.html">GameAssetManager.cc</a>.</p>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_game_asset_manager_aaa0d58e276cc10ad91a7457085598a71_cgraph.png" border="0" usemap="#class_game_asset_manager_aaa0d58e276cc10ad91a7457085598a71_cgraph" alt=""/></div>
+<map name="class_game_asset_manager_aaa0d58e276cc10ad91a7457085598a71_cgraph" id="class_game_asset_manager_aaa0d58e276cc10ad91a7457085598a71_cgraph">
+<area shape="rect" id="node2" href="class_game_asset_manager.html#abec45b44a8b35ad2d7d817ba10e0dd8d" title="GameAssetManager::Create\lGLProgram" alt="" coords="272,5,460,47"/>
+<area shape="rect" id="node3" href="class_game_asset_manager.html#a1a1e5c07f941e8d3fda40d9442ac7037" title="GameAssetManager::Create\lGLESShader" alt="" coords="508,5,696,47"/>
+<area shape="rect" id="node4" href="class_game_asset_manager.html#a23b124a213308a68a882727127601c97" title="GameAssetManager::ReadShader" alt="" coords="744,13,965,39"/>
+</map>
+</div>
+</p>
 
 </div>
 </div>
@@ -247,6 +278,103 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a1a1e5c07f941e8d3fda40d9442ac7037"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLuint GameAssetManager::CreateGLESShader </td>
+          <td>(</td>
+          <td class="paramtype">GLenum&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>shader</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>When given a type of shader to construct and the contents of a shader, <a class="el" href="class_game_asset_manager.html#a1a1e5c07f941e8d3fda40d9442ac7037">GameAssetManager::CreateGLESShader</a> will create the shader or exit with error -1.</p>
+<dl class="section return"><dt>Returns</dt><dd>the GL "token" for the requested shader. </dd></dl>
+
+<p>Definition at line <a class="el" href="_game_asset_manager_8cc_source.html#l00112">112</a> of file <a class="el" href="_game_asset_manager_8cc_source.html">GameAssetManager.cc</a>.</p>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_game_asset_manager_a1a1e5c07f941e8d3fda40d9442ac7037_cgraph.png" border="0" usemap="#class_game_asset_manager_a1a1e5c07f941e8d3fda40d9442ac7037_cgraph" alt=""/></div>
+<map name="class_game_asset_manager_a1a1e5c07f941e8d3fda40d9442ac7037_cgraph" id="class_game_asset_manager_a1a1e5c07f941e8d3fda40d9442ac7037_cgraph">
+<area shape="rect" id="node2" href="class_game_asset_manager.html#a23b124a213308a68a882727127601c97" title="GameAssetManager::ReadShader" alt="" coords="241,13,463,39"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="abec45b44a8b35ad2d7d817ba10e0dd8d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLuint GameAssetManager::CreateGLProgram </td>
+          <td>(</td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>vertex_shader</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>fragment_shader</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>When given the contents of a vertex shader and fragment shader <a class="el" href="class_game_asset_manager.html#abec45b44a8b35ad2d7d817ba10e0dd8d">GameAssetManager::CreateGLProgram</a> will compile and link them. This implementation will exit with -1 error if an error is detected.</p>
+<dl class="section return"><dt>Returns</dt><dd>the GL "token" referring to the gl program. </dd></dl>
+
+<p>Definition at line <a class="el" href="_game_asset_manager_8cc_source.html#l00083">83</a> of file <a class="el" href="_game_asset_manager_8cc_source.html">GameAssetManager.cc</a>.</p>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_game_asset_manager_abec45b44a8b35ad2d7d817ba10e0dd8d_cgraph.png" border="0" usemap="#class_game_asset_manager_abec45b44a8b35ad2d7d817ba10e0dd8d_cgraph" alt=""/></div>
+<map name="class_game_asset_manager_abec45b44a8b35ad2d7d817ba10e0dd8d_cgraph" id="class_game_asset_manager_abec45b44a8b35ad2d7d817ba10e0dd8d_cgraph">
+<area shape="rect" id="node2" href="class_game_asset_manager.html#a1a1e5c07f941e8d3fda40d9442ac7037" title="GameAssetManager::Create\lGLESShader" alt="" coords="241,5,429,47"/>
+<area shape="rect" id="node3" href="class_game_asset_manager.html#a23b124a213308a68a882727127601c97" title="GameAssetManager::ReadShader" alt="" coords="477,13,699,39"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
 <a class="anchor" id="a32837132bd70a9a9ed537323c2d3d886"></a>
 <div class="memitem">
 <div class="memproto">
@@ -281,6 +409,79 @@ Public Member Functions</h2></td></tr>
 <p>Unimplemented assisgnment operator &ndash; violates the expected semantics for assignment in C++11. </p>
 
 <p>Definition at line <a class="el" href="_game_asset_manager_8cc_source.html#l00056">56</a> of file <a class="el" href="_game_asset_manager_8cc_source.html">GameAssetManager.cc</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a23b124a213308a68a882727127601c97"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::pair&lt; GLchar *, GLint &gt; GameAssetManager::ReadShader </td>
+          <td>(</td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>shader</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>ReadShader reads the contents of a file and packs it into a null termintated GLchar * which is suitable for sending to OpenGL.</p>
+<dl class="section return"><dt>Returns</dt><dd>a pair consisting of the shader file contents and a holder for the OpenGL "token". </dd></dl>
+
+<p>Definition at line <a class="el" href="_game_asset_manager_8cc_source.html#l00153">153</a> of file <a class="el" href="_game_asset_manager_8cc_source.html">GameAssetManager.cc</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a671cddd92f1de4186c582fe0c4297b7d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;std::shared_ptr&lt;<a class="el" href="class_game_asset.html">GameAsset</a>&gt; &gt; GameAssetManager::draw_list</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_game_asset_manager_8h_source.html#l00039">39</a> of file <a class="el" href="_game_asset_manager_8h_source.html">GameAssetManager.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad7bab17862e06ca692289f934b40548b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLuint GameAssetManager::program_token</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_game_asset_manager_8h_source.html#l00040">40</a> of file <a class="el" href="_game_asset_manager_8h_source.html">GameAssetManager.h</a>.</p>
 
 </div>
 </div>

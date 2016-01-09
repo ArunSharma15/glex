@@ -6,7 +6,8 @@
 
 
 
-Inheritance diagram for Cube\+Asset\+:\nopagebreak
+Inheritance diagram for Cube\+Asset\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -15,7 +16,8 @@ Inheritance diagram for Cube\+Asset\+:\nopagebreak
 \end{figure}
 
 
-Collaboration diagram for Cube\+Asset\+:\nopagebreak
+Collaboration diagram for Cube\+Asset\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -31,12 +33,21 @@ Collaboration diagram for Cube\+Asset\+:\nopagebreak
 \item 
 virtual void \hyperlink{class_cube_asset_a1af568486056e254ffcf98fd99947bfe}{Draw} (G\+Luint)
 \end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+G\+Luint \hyperlink{class_cube_asset_ac66c2ec869f392515dad4ebda1fe4792}{element\+\_\+buffer\+\_\+length}
+\item 
+G\+Luint \hyperlink{class_cube_asset_a31bd098f60e2c24988316a9cc9335987}{vertex\+\_\+buffer\+\_\+token}
+\item 
+G\+Luint \hyperlink{class_cube_asset_a4fae699256e7c5633a8174a93ca8a0ec}{element\+\_\+buffer\+\_\+token}
+\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
+Cube Asset Class -\/ Resonsible for storing structure of Cube class and drawing. 
 
-
-Definition at line 12 of file Cube\+Asset.\+h.
+Definition at line 15 of file Cube\+Asset.\+h.
 
 
 
@@ -50,9 +61,9 @@ Definition at line 12 of file Cube\+Asset.\+h.
 \item[{int}]{z}
 \end{DoxyParamCaption}
 )}\label{class_cube_asset_a615ed01cd3abb99e9fe55087a8a4ef0a}
+Constructor -\/ Intialise vertices of cube x,y,z positions designed to modify positions of the cube(s) 
 
-
-Definition at line 4 of file Cube\+Asset.\+cc.
+Definition at line 5 of file Cube\+Asset.\+cc.
 
 \hypertarget{class_cube_asset_ab3ab9a5da82cbf8537a28652410093b1}{}\index{Cube\+Asset@{Cube\+Asset}!````~Cube\+Asset@{$\sim$\+Cube\+Asset}}
 \index{````~Cube\+Asset@{$\sim$\+Cube\+Asset}!Cube\+Asset@{Cube\+Asset}}
@@ -63,7 +74,7 @@ Definition at line 4 of file Cube\+Asset.\+cc.
 )}\label{class_cube_asset_ab3ab9a5da82cbf8537a28652410093b1}
 
 
-Definition at line 60 of file Cube\+Asset.\+cc.
+Definition at line 61 of file Cube\+Asset.\+cc.
 
 
 
@@ -81,7 +92,33 @@ Implements \hyperlink{class_game_asset_a961aa51ca0a9961fc584c0b5d5431300}{Game\+
 
 
 
-Definition at line 78 of file Cube\+Asset.\+cc.
+Definition at line 79 of file Cube\+Asset.\+cc.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_cube_asset_ac66c2ec869f392515dad4ebda1fe4792}{}\index{Cube\+Asset@{Cube\+Asset}!element\+\_\+buffer\+\_\+length@{element\+\_\+buffer\+\_\+length}}
+\index{element\+\_\+buffer\+\_\+length@{element\+\_\+buffer\+\_\+length}!Cube\+Asset@{Cube\+Asset}}
+\subsubsection[{element\+\_\+buffer\+\_\+length}]{\setlength{\rightskip}{0pt plus 5cm}G\+Luint Cube\+Asset\+::element\+\_\+buffer\+\_\+length\hspace{0.3cm}{\ttfamily [private]}}\label{class_cube_asset_ac66c2ec869f392515dad4ebda1fe4792}
+Resonsible for drawing and transferring information about Cube 
+
+Definition at line 22 of file Cube\+Asset.\+h.
+
+\hypertarget{class_cube_asset_a4fae699256e7c5633a8174a93ca8a0ec}{}\index{Cube\+Asset@{Cube\+Asset}!element\+\_\+buffer\+\_\+token@{element\+\_\+buffer\+\_\+token}}
+\index{element\+\_\+buffer\+\_\+token@{element\+\_\+buffer\+\_\+token}!Cube\+Asset@{Cube\+Asset}}
+\subsubsection[{element\+\_\+buffer\+\_\+token}]{\setlength{\rightskip}{0pt plus 5cm}G\+Luint Cube\+Asset\+::element\+\_\+buffer\+\_\+token\hspace{0.3cm}{\ttfamily [private]}}\label{class_cube_asset_a4fae699256e7c5633a8174a93ca8a0ec}
+Three numbers (or each row) create a triangle. 
+
+Definition at line 23 of file Cube\+Asset.\+h.
+
+\hypertarget{class_cube_asset_a31bd098f60e2c24988316a9cc9335987}{}\index{Cube\+Asset@{Cube\+Asset}!vertex\+\_\+buffer\+\_\+token@{vertex\+\_\+buffer\+\_\+token}}
+\index{vertex\+\_\+buffer\+\_\+token@{vertex\+\_\+buffer\+\_\+token}!Cube\+Asset@{Cube\+Asset}}
+\subsubsection[{vertex\+\_\+buffer\+\_\+token}]{\setlength{\rightskip}{0pt plus 5cm}G\+Luint Cube\+Asset\+::vertex\+\_\+buffer\+\_\+token\hspace{0.3cm}{\ttfamily [private]}}\label{class_cube_asset_a31bd098f60e2c24988316a9cc9335987}
+Store formed triangles which comprise cube
+
+Each row defines a single vertex (or edge) of the cube in 3d space (x,y\&z positions). 
+
+Definition at line 23 of file Cube\+Asset.\+h.
 
 
 

@@ -21,6 +21,22 @@ void \hyperlink{class_game_asset_manager_ad3de8ff00d55ba04728b1de8213b2349}{Add\
 \item 
 void \hyperlink{class_game_asset_manager_a32837132bd70a9a9ed537323c2d3d886}{Draw} ()
 \end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+G\+Luint \hyperlink{class_game_asset_manager_abec45b44a8b35ad2d7d817ba10e0dd8d}{Create\+G\+L\+Program} (std\+::string \&, std\+::string \&)
+\item 
+G\+Luint \hyperlink{class_game_asset_manager_a1a1e5c07f941e8d3fda40d9442ac7037}{Create\+G\+L\+E\+S\+Shader} (G\+Lenum, std\+::string \&)
+\item 
+std\+::pair$<$ G\+Lchar $\ast$, G\+Lint $>$ \hyperlink{class_game_asset_manager_a23b124a213308a68a882727127601c97}{Read\+Shader} (std\+::string \&)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \hyperlink{class_game_asset}{Game\+Asset} $>$ $>$ \hyperlink{class_game_asset_manager_a671cddd92f1de4186c582fe0c4297b7d}{draw\+\_\+list}
+\item 
+G\+Luint \hyperlink{class_game_asset_manager_ad7bab17862e06ca692289f934b40548b}{program\+\_\+token}
+\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -41,6 +57,17 @@ Definition at line 22 of file Game\+Asset\+Manager.\+h.
 Creates a \hyperlink{class_game_asset_manager}{Game\+Asset\+Manager} to load the correct shaders based on the Application\+Mode. 
 
 Definition at line 7 of file Game\+Asset\+Manager.\+cc.
+
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_asset_manager_aaa0d58e276cc10ad91a7457085598a71_cgraph}
+\end{center}
+\end{figure}
+
 
 \hypertarget{class_game_asset_manager_a1270bd61ecbcca563f079803e40c9b77}{}\index{Game\+Asset\+Manager@{Game\+Asset\+Manager}!````~Game\+Asset\+Manager@{$\sim$\+Game\+Asset\+Manager}}
 \index{````~Game\+Asset\+Manager@{$\sim$\+Game\+Asset\+Manager}!Game\+Asset\+Manager@{Game\+Asset\+Manager}}
@@ -89,6 +116,62 @@ Adds a \hyperlink{class_game_asset}{Game\+Asset} to the scene graph.
 
 Definition at line 63 of file Game\+Asset\+Manager.\+cc.
 
+\hypertarget{class_game_asset_manager_a1a1e5c07f941e8d3fda40d9442ac7037}{}\index{Game\+Asset\+Manager@{Game\+Asset\+Manager}!Create\+G\+L\+E\+S\+Shader@{Create\+G\+L\+E\+S\+Shader}}
+\index{Create\+G\+L\+E\+S\+Shader@{Create\+G\+L\+E\+S\+Shader}!Game\+Asset\+Manager@{Game\+Asset\+Manager}}
+\subsubsection[{Create\+G\+L\+E\+S\+Shader(\+G\+Lenum, std\+::string \&)}]{\setlength{\rightskip}{0pt plus 5cm}G\+Luint Game\+Asset\+Manager\+::\+Create\+G\+L\+E\+S\+Shader (
+\begin{DoxyParamCaption}
+\item[{G\+Lenum}]{type, }
+\item[{std\+::string \&}]{shader}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_game_asset_manager_a1a1e5c07f941e8d3fda40d9442ac7037}
+When given a type of shader to construct and the contents of a shader, \hyperlink{class_game_asset_manager_a1a1e5c07f941e8d3fda40d9442ac7037}{Game\+Asset\+Manager\+::\+Create\+G\+L\+E\+S\+Shader} will create the shader or exit with error -\/1.
+
+\begin{DoxyReturn}{Returns}
+the G\+L \char`\"{}token\char`\"{} for the requested shader. 
+\end{DoxyReturn}
+
+
+Definition at line 112 of file Game\+Asset\+Manager.\+cc.
+
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_asset_manager_a1a1e5c07f941e8d3fda40d9442ac7037_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_game_asset_manager_abec45b44a8b35ad2d7d817ba10e0dd8d}{}\index{Game\+Asset\+Manager@{Game\+Asset\+Manager}!Create\+G\+L\+Program@{Create\+G\+L\+Program}}
+\index{Create\+G\+L\+Program@{Create\+G\+L\+Program}!Game\+Asset\+Manager@{Game\+Asset\+Manager}}
+\subsubsection[{Create\+G\+L\+Program(std\+::string \&, std\+::string \&)}]{\setlength{\rightskip}{0pt plus 5cm}G\+Luint Game\+Asset\+Manager\+::\+Create\+G\+L\+Program (
+\begin{DoxyParamCaption}
+\item[{std\+::string \&}]{vertex\+\_\+shader, }
+\item[{std\+::string \&}]{fragment\+\_\+shader}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_game_asset_manager_abec45b44a8b35ad2d7d817ba10e0dd8d}
+When given the contents of a vertex shader and fragment shader \hyperlink{class_game_asset_manager_abec45b44a8b35ad2d7d817ba10e0dd8d}{Game\+Asset\+Manager\+::\+Create\+G\+L\+Program} will compile and link them. This implementation will exit with -\/1 error if an error is detected.
+
+\begin{DoxyReturn}{Returns}
+the G\+L \char`\"{}token\char`\"{} referring to the gl program. 
+\end{DoxyReturn}
+
+
+Definition at line 83 of file Game\+Asset\+Manager.\+cc.
+
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_asset_manager_abec45b44a8b35ad2d7d817ba10e0dd8d_cgraph}
+\end{center}
+\end{figure}
+
+
 \hypertarget{class_game_asset_manager_a32837132bd70a9a9ed537323c2d3d886}{}\index{Game\+Asset\+Manager@{Game\+Asset\+Manager}!Draw@{Draw}}
 \index{Draw@{Draw}!Game\+Asset\+Manager@{Game\+Asset\+Manager}}
 \subsubsection[{Draw()}]{\setlength{\rightskip}{0pt plus 5cm}void Game\+Asset\+Manager\+::\+Draw (
@@ -110,6 +193,39 @@ Definition at line 70 of file Game\+Asset\+Manager.\+cc.
 Unimplemented assisgnment operator -- violates the expected semantics for assignment in C++11. 
 
 Definition at line 56 of file Game\+Asset\+Manager.\+cc.
+
+\hypertarget{class_game_asset_manager_a23b124a213308a68a882727127601c97}{}\index{Game\+Asset\+Manager@{Game\+Asset\+Manager}!Read\+Shader@{Read\+Shader}}
+\index{Read\+Shader@{Read\+Shader}!Game\+Asset\+Manager@{Game\+Asset\+Manager}}
+\subsubsection[{Read\+Shader(std\+::string \&)}]{\setlength{\rightskip}{0pt plus 5cm}std\+::pair$<$ G\+Lchar $\ast$, G\+Lint $>$ Game\+Asset\+Manager\+::\+Read\+Shader (
+\begin{DoxyParamCaption}
+\item[{std\+::string \&}]{shader}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_game_asset_manager_a23b124a213308a68a882727127601c97}
+Read\+Shader reads the contents of a file and packs it into a null termintated G\+Lchar $\ast$ which is suitable for sending to Open\+G\+L.
+
+\begin{DoxyReturn}{Returns}
+a pair consisting of the shader file contents and a holder for the Open\+G\+L \char`\"{}token\char`\"{}. 
+\end{DoxyReturn}
+
+
+Definition at line 153 of file Game\+Asset\+Manager.\+cc.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_game_asset_manager_a671cddd92f1de4186c582fe0c4297b7d}{}\index{Game\+Asset\+Manager@{Game\+Asset\+Manager}!draw\+\_\+list@{draw\+\_\+list}}
+\index{draw\+\_\+list@{draw\+\_\+list}!Game\+Asset\+Manager@{Game\+Asset\+Manager}}
+\subsubsection[{draw\+\_\+list}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$std\+::shared\+\_\+ptr$<${\bf Game\+Asset}$>$ $>$ Game\+Asset\+Manager\+::draw\+\_\+list\hspace{0.3cm}{\ttfamily [private]}}\label{class_game_asset_manager_a671cddd92f1de4186c582fe0c4297b7d}
+
+
+Definition at line 39 of file Game\+Asset\+Manager.\+h.
+
+\hypertarget{class_game_asset_manager_ad7bab17862e06ca692289f934b40548b}{}\index{Game\+Asset\+Manager@{Game\+Asset\+Manager}!program\+\_\+token@{program\+\_\+token}}
+\index{program\+\_\+token@{program\+\_\+token}!Game\+Asset\+Manager@{Game\+Asset\+Manager}}
+\subsubsection[{program\+\_\+token}]{\setlength{\rightskip}{0pt plus 5cm}G\+Luint Game\+Asset\+Manager\+::program\+\_\+token\hspace{0.3cm}{\ttfamily [private]}}\label{class_game_asset_manager_ad7bab17862e06ca692289f934b40548b}
+
+
+Definition at line 40 of file Game\+Asset\+Manager.\+h.
 
 
 

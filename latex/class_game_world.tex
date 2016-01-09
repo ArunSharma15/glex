@@ -11,6 +11,11 @@
 \item 
 void \hyperlink{class_game_world_a275418607d8286979b276f165ad5876b}{Draw} ()
 \end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{class_game_asset_manager}{Game\+Asset\+Manager} $>$ \hyperlink{class_game_world_aec5c0bca4fb5a41e4aac2dce2871266d}{asset\+\_\+manager}
+\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -28,7 +33,9 @@ Definition at line 18 of file Game\+World.\+h.
 \item[{{\bf Application\+Mode}}]{mode}
 \end{DoxyParamCaption}
 )}\label{class_game_world_a17a84e57a80600961088afc753036f89}
-We thread the Application\+Mode through the \hyperlink{class_game_world}{Game\+World} ss we want to read it in from the user. Threading the state through the various function calls is preferable (in this case) to having some kind of global state. 
+We thread the Application\+Mode through the \hyperlink{class_game_world}{Game\+World} ss we want to read it in from the user. Threading the state through the various function calls is preferable (in this case) to having some kind of global state.
+
+\hyperlink{class_game_world}{Game\+World} class B\+L\+A\+H B\+L\+A\+H $<$ enum value 1 
 
 Definition at line 5 of file Game\+World.\+cc.
 
@@ -44,7 +51,17 @@ Definition at line 5 of file Game\+World.\+cc.
 )}\label{class_game_world_a275418607d8286979b276f165ad5876b}
 Calling \hyperlink{class_game_world_a275418607d8286979b276f165ad5876b}{Draw()} will draw the entire world. 
 
-Definition at line 47 of file Game\+World.\+cc.
+Definition at line 49 of file Game\+World.\+cc.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_game_world_aec5c0bca4fb5a41e4aac2dce2871266d}{}\index{Game\+World@{Game\+World}!asset\+\_\+manager@{asset\+\_\+manager}}
+\index{asset\+\_\+manager@{asset\+\_\+manager}!Game\+World@{Game\+World}}
+\subsubsection[{asset\+\_\+manager}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<${\bf Game\+Asset\+Manager}$>$ Game\+World\+::asset\+\_\+manager\hspace{0.3cm}{\ttfamily [private]}}\label{class_game_world_aec5c0bca4fb5a41e4aac2dce2871266d}
+
+
+Definition at line 32 of file Game\+World.\+h.
 
 
 
