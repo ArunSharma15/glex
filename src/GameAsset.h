@@ -5,9 +5,13 @@
 
 #include <GL/gl.h>
 
+
+/**
+ * Abstract class
+ */
 class GameAsset {
  public:
-  virtual void Draw(GLuint) = 0;
+  virtual void Draw(GLuint) = 0;/*! Draw method */
 
 };
 

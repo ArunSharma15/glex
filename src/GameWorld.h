@@ -9,7 +9,7 @@
 #include "GameAssetManager.h"
 #include "CubeAsset.h"
 #include "PyramidAsset.h"
-
+#include "Camera.h"
 /**
  * GameWorld allows us to separate the management of the game world from the
  * nuts and bolts of game loop initialisation.  The GameWorld currently has
@@ -23,7 +23,7 @@ class GameWorld {
    * is preferable (in this case) to having some kind of global state.
    */
   GameWorld(ApplicationMode);
-
+	
   /**
    * Calling Draw() will draw the entire world.
    */

@@ -9,9 +9,11 @@
 #include <iostream>
 
 #include <GL/gl.h>
+#include <glm/ext.hpp>
 
 #include "common.h"
 #include "GameAsset.h"
+#include "Camera.h"
 
 
 /**
@@ -25,10 +27,13 @@ class GameAssetManager {
   virtual ~GameAssetManager();
   GameAssetManager(GameAssetManager const&); // copy constructor
   GameAssetManager(GameAssetManager const&&); // move constructor
+  
   void operator=(GameAssetManager const&); // assignment
   void AddAsset(std::shared_ptr<GameAsset>);
+  
   void Draw();
-
+  
+  
  private:
   GLuint CreateGLProgram(std::string &, std::string &);
   GLuint CreateGLESShader(GLenum, std::string &);
@@ -38,6 +43,7 @@ class GameAssetManager {
   // The internal scene graph is a simple list.
   std::vector<std::shared_ptr<GameAsset>> draw_list;
   GLuint program_token;
+  
 };
 
 #endif // GAMEASSETMANAGER_H

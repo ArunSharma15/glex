@@ -73,7 +73,7 @@ std::shared_ptr<SDL_Window> InitWorld() {
   atexit(SDL_Quit);
 
   // Create a new window with an OpenGL surface
-  _window = SDL_CreateWindow("Shader Example"
+  _window = SDL_CreateWindow("CI224 - Assignment 1 - Arun Sharma"
                              , SDL_WINDOWPOS_CENTERED
                              , SDL_WINDOWPOS_CENTERED
                              , width
@@ -170,19 +170,19 @@ int main(int argc, char ** argv) {
     switch (event.key.keysym.sym) {
     case SDLK_w:			//w
       	std::cout << "W" << std::endl;
-        cam -> CameraKeys('w');
+        cam -> CameraMov('w',2,2);
       break;
     case SDLK_a:			//a
       	std::cout << "A" << std::endl;
-      	cam -> CameraKeys('a');
+      	cam -> CameraMov('a',2,2);
       break;
     case SDLK_s:			//s
 	std::cout << "S" << std::endl;
-	cam -> CameraKeys('s');
+	cam -> CameraMov('s',2,2);
       break;
     case SDLK_d:			//d
       	std::cout << "D" << std::endl;
-      	cam -> CameraKeys('d');
+      	cam -> CameraMov('d',2,2);
       break;
     default:
       break;

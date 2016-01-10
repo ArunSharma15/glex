@@ -1,46 +1,74 @@
 #include "CubeAsset.h"
 #include "Camera.h"
 #include <glm/ext.hpp>
-CubeAsset::CubeAsset(int x, int y, int z) {
-  // model coordinates, origin at centre.
-  GLfloat vertex_buffer [] {
+
+CubeAsset::CubeAsset(GLfloat x, GLfloat y, GLfloat z, GLfloat r, GLfloat g, GLfloat b) { /*!Send vertice maniplation and RGB colour values for the cube.*/
+   GLfloat vertex_buffer [] {
     
-   -0.5+x,-0.5+y,-0.5+z,
-   -0.5+x, 0.5+y,-0.5+z,
+   -0.5f+x,-0.5f+y,-0.5f+z, //Vertex 0
+   -0.5f+x, 0.5f+y,-0.5f+z, //Vertex 1
      
-    0.5+x,-0.5+y,-0.5+z,
-    0.5+x, 0.5+y,-0.5+z,
+    0.5f+x,-0.5f+y,-0.5f+z, //Vertex 2
+    0.5f+x, 0.5f+y,-0.5f+z, //Vertex 3
    
-   -0.5+x, 0.5+y, 0.5+z,
-    0.5+x, 0.5+y, 0.5+z,
+   -0.5f+x, 0.5f+y, 0.5f+z, //Vertex 4
+    0.5f+x, 0.5f+y, 0.5f+z, //Vertex 5
    
-    0.5+x,-0.5+y, 0.5+z,
-   -0.5+x,-0.5+y, 0.5+z
+    0.5f+x,-0.5f+y, 0.5f+z, //Vertex 6
+   -0.5f+x,-0.5f+y, 0.5f+z  //Vertex 7
     
 
   };
+	
+	GLfloat vertex_buffer_length = sizeof(vertex_buffer);//Size of vertex buffer
+	
+  	GLfloat g_colour_buffer_data[]= 
+	{
+	//Red-Green-Blue (RGB) Colour Values - Sent from constructor.
+	r,g,b, //Side 1 - Colour Triangle
+	r,g,b, //Side 1 - Colour Triangle
+	
+	r,g,b, //Side 2 - Colour Triangle
+	r,g,b, //Side 2 - Colour Triangle
+	
+	r,g,b, //Side 3 - Colour Triangle
+	r,g,b, //Side 3 - Colour Triangle
+	
+	r,g,b, //Side 4 - Colour Triangle
+	r,g,b, //Side 4 - Colour Triangle
+	
+	r,g,b,  //Side 5 - Colour Triangle
+	r,g,b   //Side 5 - Colour Triangle
+		
+	};
+	colour_buffer_length = sizeof(g_colour_buffer_data);
 
-  element_buffer_length = 36;
-  GLuint element_buffer []  {
-    0,1,2
-   ,1,3,2
+  //element_buffer_length = 36;
+  GLuint element_buffer []  { 
+    
+    0,1,2 //Side 1
+   ,1,3,2 //Side 1
    
-   ,1,4,3
-   ,4,3,5
+   ,1,4,3 //Side 2
+   ,4,3,5 //Side 2
 
-   ,3,2,6
-   ,3,5,6
+   ,3,2,6 //Side 3
+   ,3,5,6 //Side 3
    
-   ,0,1,4
-   ,0,7,4
+   ,0,1,4 //Side 4
+   ,0,7,4 //Side 4
 
-   ,0,7,2
-   ,2,6,7
+   ,0,7,2 //Side 5
+   ,2,6,7 //Side 5
    
-   ,4,7,6
-   ,4,6,5
+   ,4,7,6 //Side 6
+   ,4,6,5 //Side 6
 
   };
+  
+
+	element_buffer_length = sizeof(element_buffer);
+	
 
   // Transfer buffers to the GPU
   //
@@ -50,11 +78,19 @@ CubeAsset::CubeAsset(int x, int y, int z) {
 
   // immediately bind the buffer and transfer the data
   glBindBuffer(GL_ARRAY_BUFFER, vertex_buffer_token);
-  glBufferData(GL_ARRAY_BUFFER, sizeof(GLfloat) * 72, vertex_buffer, GL_STATIC_DRAW);
+  glBufferData(GL_ARRAY_BUFFER, vertex_buffer_length, vertex_buffer, GL_STATIC_DRAW);
 
-  glGenBuffers(1, &element_buffer_token);
-  glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, element_buffer_token);
-  glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(GLuint) * element_buffer_length, element_buffer, GL_STATIC_DRAW);
+  // create buffer
+  glGenBuffers(1, &colour_buffer_token);
+  // immediately bind the buffer and transfer the data
+  glBindBuffer(GL_ARRAY_BUFFER, colour_buffer_token);
+  glBufferData(GL_ARRAY_BUFFER, colour_buffer_length, g_colour_buffer_data, GL_STATIC_DRAW);
+  
+  // create buffer
+  glGenBuffers(1,&element_buffer_token);
+  // immediately bind the buffer and transfer the data
+  glBindBuffer(GL_ELEMENT_ARRAY_BUFFER,element_buffer_token);
+  glBufferData(GL_ELEMENT_ARRAY_BUFFER,element_buffer_length,element_buffer,GL_STATIC_DRAW);
 }
 
 CubeAsset::~CubeAsset() {
@@ -111,6 +147,7 @@ void CubeAsset::Draw(GLuint program_token) {
 
   // use the previously transferred buffer as the vertex array.  This way
   // we transfer the buffer once -- at construction -- not on every frame.
+  glEnableVertexAttribArray(0);
   glBindBuffer(GL_ARRAY_BUFFER, vertex_buffer_token);
   glVertexAttribPointer(
                         position_attrib,               /* attribute */
@@ -120,9 +157,23 @@ void CubeAsset::Draw(GLuint program_token) {
                         0,                             /* stride */
                         (void*)0                       /* array buffer offset */
                         );
-  glEnableVertexAttribArray(position_attrib);
-
+  //glEnableVertexAttribArray(position_attrib);
+	glEnableVertexAttribArray(1);
   checkGLError();
+
+  glBindBuffer(GL_ARRAY_BUFFER, colour_buffer_token);
+  glVertexAttribPointer(
+  
+  1,
+  3,
+  GL_FLOAT,
+  GL_FALSE,
+  0,
+  (void*)0
+  );
+  checkGLError();
+  
+  
 
   glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, element_buffer_token);
   glDrawElements(

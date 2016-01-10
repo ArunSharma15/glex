@@ -8,16 +8,23 @@
 #include <glm/ext.hpp>
 
 #include "GameAsset.h"
-
-class CubeAsset : public GameAsset {
+/**
+ * Cube Asset Class - Resonsible for storing structure of Cube class
+ * and drawing.
+ */
+class CubeAsset : public GameAsset { 
  public:
-  CubeAsset(int x,int y, int z);
-  ~CubeAsset();
-  virtual void Draw(GLuint);
+  CubeAsset(GLfloat x,GLfloat y, GLfloat z,GLfloat r, GLfloat g, GLfloat b);
+  ~CubeAsset(); /*!< Constructor - Intialise vertices of cube.*/
+  virtual void Draw(GLuint);/*!< Resonsible for drawing and transferring information about Cube. */
 
  private:
-  GLuint element_buffer_length;
-  GLuint vertex_buffer_token, element_buffer_token;
+  GLuint element_buffer_length; /*!< Create triangles for each face of the cube, 3 vertex points create a triangle, 2 triangles for a cube face. */	
+  GLuint colour_buffer_length;  /*!< Create a uniformly coloured cube, which means fill in all the triangles with the same RGB value.*/ 
+  GLuint element_buffer_token;
+  GLuint vertex_buffer_token; /*!< Resonsible for storing vertices of the cube.*/
+  
+  GLuint colour_buffer_token;
 };
 
 #endif // CUBEASSET_H

@@ -1,34 +1,61 @@
 #include "PyramidAsset.h"
 #include "Camera.h"
 #include <glm/ext.hpp>
-PyramidAsset::PyramidAsset(int x, int y, int z) {
+/**
+ * Pyramid Class - Responsible for spawning a pyramid to the block world.
+ * X,Y,Z coordinates for each pyramid.
+ */
+PyramidAsset::PyramidAsset(GLfloat x, GLfloat y, GLfloat z, GLfloat r, GLfloat g, GLfloat b) {
   // model coordinates, origin at centre.
   GLfloat vertex_buffer [] {
     
-	-0.5,-0.5,-0.5,
-	 0.5,-0.5,-0.5,
+	-0.5f+x,-0.5f+y,-0.5f+z, //Vertex for Pyramid Square Base
+	 0.5f+x,-0.5f+y,-0.5f+z, //Vertex for Pyramid Square Base
 	 
-	 0.5,-0.5, 0.5,
-	-0.5,-0.5, 0.5,
+	 0.5f+x,-0.5f+y, 0.5f+z, //Vertix for Pyramid Square Base
+	-0.5f+x,-0.5f+y, 0.5f+z, //Vertix for Pyramid Square Base
 	
-	 0.0, 0.0, 0.0
+	 0.0f+x, 0.0f+y, 0.0f+z //Vertix for Pyramid apex.
     
 
   };
+  GLfloat vertex_buffer_length = sizeof(vertex_buffer);
+  
+  GLfloat colour_buffer[] = {
+	  
+	r,g,b, //RGB colour value for square base.
+	r,g,b,
+	r,g,b,
+	
+	r,g,b,
+	r,g,b,
+	r,g,b,
+	
+	r,g,b,
+	r,g,b,
+	r,g,b
+	  
+  };
+  
+  colour_buffer_length = sizeof(colour_buffer);
+  
+  
 
-  element_buffer_length = 18;
+  //element_buffer_length = 18;
   GLuint element_buffer []  {
 
-    0,1,3,
-    1,3,2,
+    0,1,3,//Triangle 1 to form part of Pyramid square base.
+    1,3,2,//Triangle 2 to form part of Pyramid square vase,
     
-    0,1,4,
-    1,2,4,
+    0,1,4,//Triangle 3 to go from base to apex.
+    1,2,4,//Triangle 4 to go from base to apex.
     
-    0,4,3,
-    3,4,2
+    0,4,3,//Triangle 5 to go from base to apex.
+    3,4,2 //Triangle 6 to go from base to apex.
 
   };
+  element_buffer_length = sizeof(element_buffer);
+  
 
   // Transfer buffers to the GPU
   //
@@ -38,11 +65,16 @@ PyramidAsset::PyramidAsset(int x, int y, int z) {
 
   // immediately bind the buffer and transfer the data
   glBindBuffer(GL_ARRAY_BUFFER, vertex_buffer_token);
-  glBufferData(GL_ARRAY_BUFFER, sizeof(GLfloat) * 72, vertex_buffer, GL_STATIC_DRAW);
+  glBufferData(GL_ARRAY_BUFFER, vertex_buffer_length, vertex_buffer, GL_STATIC_DRAW);
+
+
+  glGenBuffers(1,&colour_buffer_token);
+  glBindBuffer(GL_ARRAY_BUFFER, colour_buffer_token);
+  glBufferData(GL_ARRAY_BUFFER, colour_buffer_length, colour_buffer,GL_STATIC_DRAW);
 
   glGenBuffers(1, &element_buffer_token);
   glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, element_buffer_token);
-  glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(GLuint) * element_buffer_length, element_buffer, GL_STATIC_DRAW);
+  glBufferData(GL_ELEMENT_ARRAY_BUFFER, element_buffer_length, element_buffer, GL_STATIC_DRAW);
 }
 
 PyramidAsset::~PyramidAsset() {
@@ -54,6 +86,7 @@ PyramidAsset::~PyramidAsset() {
 // define symbol to be nothing
 #define checkGLError()
 #endif
+
 
 void PyramidAsset::checkError(std::string file, int line) {
   GLenum gl_error = glGetError();
@@ -99,6 +132,7 @@ void PyramidAsset::Draw(GLuint program_token) {
 
   // use the previously transferred buffer as the vertex array.  This way
   // we transfer the buffer once -- at construction -- not on every frame.
+  glEnableVertexAttribArray(0);
   glBindBuffer(GL_ARRAY_BUFFER, vertex_buffer_token);
   glVertexAttribPointer(
                         position_attrib,               /* attribute */
@@ -108,8 +142,18 @@ void PyramidAsset::Draw(GLuint program_token) {
                         0,                             /* stride */
                         (void*)0                       /* array buffer offset */
                         );
-  glEnableVertexAttribArray(position_attrib);
-
+  glEnableVertexAttribArray(1);
+  checkGLError();
+  
+  glBindBuffer(GL_ARRAY_BUFFER,colour_buffer_token);
+  glVertexAttribPointer(
+						1,
+						3,
+						GL_FLOAT,
+						GL_FALSE,
+						0,
+						(void*)0
+  						);
   checkGLError();
 
   glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, element_buffer_token);

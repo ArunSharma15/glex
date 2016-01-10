@@ -107,7 +107,7 @@ am__installdirs = "$(DESTDIR)$(bindir)"
 PROGRAMS = $(bin_PROGRAMS)
 am_shaderexample_OBJECTS = main.$(OBJEXT) GameWorld.$(OBJEXT) \
 	GameAssetManager.$(OBJEXT) CubeAsset.$(OBJEXT) \
-	Camera.$(OBJEXT)
+	Camera.$(OBJEXT) PyramidAsset.$(OBJEXT)
 shaderexample_OBJECTS = $(am_shaderexample_OBJECTS)
 shaderexample_LDADD = $(LDADD)
 AM_V_lt = $(am__v_lt_$(V))
@@ -413,6 +413,7 @@ include ./$(DEPDIR)/Camera.Po
 include ./$(DEPDIR)/CubeAsset.Po
 include ./$(DEPDIR)/GameAssetManager.Po
 include ./$(DEPDIR)/GameWorld.Po
+include ./$(DEPDIR)/PyramidAsset.Po
 include ./$(DEPDIR)/main.Po
 
 .cc.o:

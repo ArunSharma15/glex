@@ -1,5 +1,6 @@
 #include "GameAssetManager.h"
-
+#include "Camera.h"
+class Camera cam;
 /**
  * Creates a GameAssetManager to load the correct shaders based on the
  * ApplicationMode.
@@ -22,6 +23,7 @@ GameAssetManager::GameAssetManager(ApplicationMode mode) {
 
   program_token = CreateGLProgram(vertex_shader, fragment_shader);
   
+   
   
 }
 
@@ -69,6 +71,8 @@ void GameAssetManager::AddAsset(std::shared_ptr<GameAsset> the_asset) {
  */
 void GameAssetManager::Draw() {
   for(auto ga: draw_list) {
+	  
+	 	  
     ga->Draw(program_token);
   }
 }
