@@ -7,33 +7,55 @@
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+\hyperlink{class_camera_a01f94c3543f56ede7af49dc778f19331}{Camera} ()
+\item 
 void \hyperlink{class_camera_ae97e22115cee81d2901119faa9d23f38}{Camera\+Keys} (char press)
 \item 
-void \hyperlink{class_camera_a9d65e0f62f7e8b3f73206c78c23a3734}{Camera\+Mov} ()
+glm\+::mat4 \hyperlink{class_camera_a281099a5ab2f325847dca08eefcc140c}{Camera\+Mov} (char press, int m\+X, int m\+Y)
 \end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-G\+Lfloat \hyperlink{class_camera_ada530cf7b97b15431c729ddc3435d702}{Mouse\+\_\+\+Sensitivity} = 0.\+05f
+G\+Lfloat \hyperlink{class_camera_a6acfd236911f7f867ba2993f59a22fa4}{cam\+Pos\+X}
+\item 
+G\+Lfloat \hyperlink{class_camera_adeb153325cb42a77c6114ab597c69cfa}{cam\+Pos\+Y}
+\item 
+G\+Lfloat \hyperlink{class_camera_a4fbae1f797ffb17794d38b2aea4bcc48}{cam\+Pos\+Z}
+\item 
+G\+Lfloat \hyperlink{class_camera_ada530cf7b97b15431c729ddc3435d702}{Mouse\+\_\+\+Sensitivity}
 \item 
 G\+Lfloat \hyperlink{class_camera_ab20174a89f86b685216dfe825e9ce95d}{Player\+\_\+\+Speed} = 1.\+0
 \item 
-G\+Lfloat \hyperlink{class_camera_a7b52b1b9a336c038442c6442d1fcbf92}{Horiz\+\_\+\+Cam} = 0.\+0
+G\+Lfloat \hyperlink{class_camera_a6d9ee75d6ad778196e1083dd5a0167ad}{Horiz\+\_\+\+Cam\+\_\+angle} = 0
 \item 
-G\+Lfloat \hyperlink{class_camera_a04b5fdf888820779329b982e3f7cc635}{Vert\+\_\+\+Cam} = 0.\+0
+G\+Lfloat \hyperlink{class_camera_a2b4d70e845ce688971b9ae32cf47dc45}{Vert\+\_\+\+Cam\+\_\+angle} = 0
 \item 
 glm\+::vec3 \hyperlink{class_camera_abc7eb4129b1e04323354ab456b441348}{Camera\+\_\+\+Pos} = glm\+::vec3(1,2,-\/1)
 \item 
-glm\+::vec3 \hyperlink{class_camera_ae0e1410bf317b08212f1ce3b0b8fc18a}{Z\+\_\+\+Mov}
+G\+Lfloat \hyperlink{class_camera_abc15ba4d62277f3f995127bb5d41517f}{mouse\+D\+X} = 1
 \item 
-glm\+::vec3 \hyperlink{class_camera_ab968e0816b2909fddcd19886e0fae3f0}{X\+\_\+\+Mov}
+G\+Lfloat \hyperlink{class_camera_aeee67efd9e51edc7f3bc372c4d323753}{mouse\+Dy} = 1
 \end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
-A reasonable attempt at implementing a camera interface. Purpose is to change camera position using uniform variables and acceptance of keyboard input. 
+A reasonable attempt at implementing a camera interface. Purpose is to change camera position using uniform variables and acceptance of keyboard input. An attempt based on the tutorial www.\+opengl-\/tutorial.\+org/beginners-\/tutorials/tutorial-\/6-\/keyboard-\/and-\/mouse/ 
 
-Definition at line 14 of file Camera.\+h.
+Definition at line 15 of file Camera.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_camera_a01f94c3543f56ede7af49dc778f19331}{}\index{Camera@{Camera}!Camera@{Camera}}
+\index{Camera@{Camera}!Camera@{Camera}}
+\subsubsection[{Camera()}]{\setlength{\rightskip}{0pt plus 5cm}Camera\+::\+Camera (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_camera_a01f94c3543f56ede7af49dc778f19331}
+
+
+Definition at line 9 of file Camera.\+cc.
 
 
 
@@ -45,20 +67,24 @@ Definition at line 14 of file Camera.\+h.
 \item[{char}]{press}
 \end{DoxyParamCaption}
 )}\label{class_camera_ae97e22115cee81d2901119faa9d23f38}
-Method to change camera depending on keyboard input sent to it. List of if conditons that will modify camera position if certain key presses are sent to it. 
+Constructor for the camera class Old method to modify camera -\/ obselete remove. List of if conditons that will modify camera position if certain key presses are sent to it.
 
-Definition at line 8 of file Camera.\+cc.
+Pretty much empty 
 
-\hypertarget{class_camera_a9d65e0f62f7e8b3f73206c78c23a3734}{}\index{Camera@{Camera}!Camera\+Mov@{Camera\+Mov}}
+Definition at line 14 of file Camera.\+cc.
+
+\hypertarget{class_camera_a281099a5ab2f325847dca08eefcc140c}{}\index{Camera@{Camera}!Camera\+Mov@{Camera\+Mov}}
 \index{Camera\+Mov@{Camera\+Mov}!Camera@{Camera}}
-\subsubsection[{Camera\+Mov()}]{\setlength{\rightskip}{0pt plus 5cm}void Camera\+::\+Camera\+Mov (
+\subsubsection[{Camera\+Mov(char press, int m\+X, int m\+Y)}]{\setlength{\rightskip}{0pt plus 5cm}glm\+::mat4 Camera\+::\+Camera\+Mov (
 \begin{DoxyParamCaption}
-{}
+\item[{char}]{press, }
+\item[{int}]{m\+X, }
+\item[{int}]{m\+Y}
 \end{DoxyParamCaption}
-)}\label{class_camera_a9d65e0f62f7e8b3f73206c78c23a3734}
-Method to set up uniform variables on this end and to send them to shader. 
+)}\label{class_camera_a281099a5ab2f325847dca08eefcc140c}
+Method to modify camera position based on keyboard input and possibly mouse. Switch case statement is better than using lots of I\+F Statements. 
 
-Definition at line 34 of file Camera.\+cc.
+Definition at line 20 of file Camera.\+cc.
 
 
 
@@ -68,49 +94,70 @@ Definition at line 34 of file Camera.\+cc.
 \subsubsection[{Camera\+\_\+\+Pos}]{\setlength{\rightskip}{0pt plus 5cm}glm\+::vec3 Camera\+::\+Camera\+\_\+\+Pos = glm\+::vec3(1,2,-\/1)}\label{class_camera_abc7eb4129b1e04323354ab456b441348}
 3\+D Floating point vector for camera position. 
 
-Definition at line 28 of file Camera.\+h.
+Definition at line 33 of file Camera.\+h.
 
-\hypertarget{class_camera_a7b52b1b9a336c038442c6442d1fcbf92}{}\index{Camera@{Camera}!Horiz\+\_\+\+Cam@{Horiz\+\_\+\+Cam}}
-\index{Horiz\+\_\+\+Cam@{Horiz\+\_\+\+Cam}!Camera@{Camera}}
-\subsubsection[{Horiz\+\_\+\+Cam}]{\setlength{\rightskip}{0pt plus 5cm}G\+Lfloat Camera\+::\+Horiz\+\_\+\+Cam = 0.\+0}\label{class_camera_a7b52b1b9a336c038442c6442d1fcbf92}
-Float to hold information about horizontal camera. 
+\hypertarget{class_camera_a6acfd236911f7f867ba2993f59a22fa4}{}\index{Camera@{Camera}!cam\+Pos\+X@{cam\+Pos\+X}}
+\index{cam\+Pos\+X@{cam\+Pos\+X}!Camera@{Camera}}
+\subsubsection[{cam\+Pos\+X}]{\setlength{\rightskip}{0pt plus 5cm}G\+Lfloat Camera\+::cam\+Pos\+X}\label{class_camera_a6acfd236911f7f867ba2993f59a22fa4}
+X position of the camera. 
+
+Definition at line 24 of file Camera.\+h.
+
+\hypertarget{class_camera_adeb153325cb42a77c6114ab597c69cfa}{}\index{Camera@{Camera}!cam\+Pos\+Y@{cam\+Pos\+Y}}
+\index{cam\+Pos\+Y@{cam\+Pos\+Y}!Camera@{Camera}}
+\subsubsection[{cam\+Pos\+Y}]{\setlength{\rightskip}{0pt plus 5cm}G\+Lfloat Camera\+::cam\+Pos\+Y}\label{class_camera_adeb153325cb42a77c6114ab597c69cfa}
+Y position of the camera. 
 
 Definition at line 25 of file Camera.\+h.
 
+\hypertarget{class_camera_a4fbae1f797ffb17794d38b2aea4bcc48}{}\index{Camera@{Camera}!cam\+Pos\+Z@{cam\+Pos\+Z}}
+\index{cam\+Pos\+Z@{cam\+Pos\+Z}!Camera@{Camera}}
+\subsubsection[{cam\+Pos\+Z}]{\setlength{\rightskip}{0pt plus 5cm}G\+Lfloat Camera\+::cam\+Pos\+Z}\label{class_camera_a4fbae1f797ffb17794d38b2aea4bcc48}
+Z position of the camera 
+
+Definition at line 26 of file Camera.\+h.
+
+\hypertarget{class_camera_a6d9ee75d6ad778196e1083dd5a0167ad}{}\index{Camera@{Camera}!Horiz\+\_\+\+Cam\+\_\+angle@{Horiz\+\_\+\+Cam\+\_\+angle}}
+\index{Horiz\+\_\+\+Cam\+\_\+angle@{Horiz\+\_\+\+Cam\+\_\+angle}!Camera@{Camera}}
+\subsubsection[{Horiz\+\_\+\+Cam\+\_\+angle}]{\setlength{\rightskip}{0pt plus 5cm}G\+Lfloat Camera\+::\+Horiz\+\_\+\+Cam\+\_\+angle = 0}\label{class_camera_a6d9ee75d6ad778196e1083dd5a0167ad}
+Float to hold information about horizontal camera angle. 
+
+Definition at line 30 of file Camera.\+h.
+
 \hypertarget{class_camera_ada530cf7b97b15431c729ddc3435d702}{}\index{Camera@{Camera}!Mouse\+\_\+\+Sensitivity@{Mouse\+\_\+\+Sensitivity}}
 \index{Mouse\+\_\+\+Sensitivity@{Mouse\+\_\+\+Sensitivity}!Camera@{Camera}}
-\subsubsection[{Mouse\+\_\+\+Sensitivity}]{\setlength{\rightskip}{0pt plus 5cm}G\+Lfloat Camera\+::\+Mouse\+\_\+\+Sensitivity = 0.\+05f}\label{class_camera_ada530cf7b97b15431c729ddc3435d702}
+\subsubsection[{Mouse\+\_\+\+Sensitivity}]{\setlength{\rightskip}{0pt plus 5cm}G\+Lfloat Camera\+::\+Mouse\+\_\+\+Sensitivity}\label{class_camera_ada530cf7b97b15431c729ddc3435d702}
 Float to hold sensitivity of mouse. 
 
-Definition at line 22 of file Camera.\+h.
+Definition at line 27 of file Camera.\+h.
+
+\hypertarget{class_camera_abc15ba4d62277f3f995127bb5d41517f}{}\index{Camera@{Camera}!mouse\+D\+X@{mouse\+D\+X}}
+\index{mouse\+D\+X@{mouse\+D\+X}!Camera@{Camera}}
+\subsubsection[{mouse\+D\+X}]{\setlength{\rightskip}{0pt plus 5cm}G\+Lfloat Camera\+::mouse\+D\+X = 1}\label{class_camera_abc15ba4d62277f3f995127bb5d41517f}
+Difference in x axis mouse movement 
+
+Definition at line 36 of file Camera.\+h.
+
+\hypertarget{class_camera_aeee67efd9e51edc7f3bc372c4d323753}{}\index{Camera@{Camera}!mouse\+Dy@{mouse\+Dy}}
+\index{mouse\+Dy@{mouse\+Dy}!Camera@{Camera}}
+\subsubsection[{mouse\+Dy}]{\setlength{\rightskip}{0pt plus 5cm}G\+Lfloat Camera\+::mouse\+Dy = 1}\label{class_camera_aeee67efd9e51edc7f3bc372c4d323753}
+Difference in y axis mouse movement 
+
+Definition at line 38 of file Camera.\+h.
 
 \hypertarget{class_camera_ab20174a89f86b685216dfe825e9ce95d}{}\index{Camera@{Camera}!Player\+\_\+\+Speed@{Player\+\_\+\+Speed}}
 \index{Player\+\_\+\+Speed@{Player\+\_\+\+Speed}!Camera@{Camera}}
 \subsubsection[{Player\+\_\+\+Speed}]{\setlength{\rightskip}{0pt plus 5cm}G\+Lfloat Camera\+::\+Player\+\_\+\+Speed = 1.\+0}\label{class_camera_ab20174a89f86b685216dfe825e9ce95d}
 Float to hold information about how fast player moves. 
 
-Definition at line 23 of file Camera.\+h.
+Definition at line 28 of file Camera.\+h.
 
-\hypertarget{class_camera_a04b5fdf888820779329b982e3f7cc635}{}\index{Camera@{Camera}!Vert\+\_\+\+Cam@{Vert\+\_\+\+Cam}}
-\index{Vert\+\_\+\+Cam@{Vert\+\_\+\+Cam}!Camera@{Camera}}
-\subsubsection[{Vert\+\_\+\+Cam}]{\setlength{\rightskip}{0pt plus 5cm}G\+Lfloat Camera\+::\+Vert\+\_\+\+Cam = 0.\+0}\label{class_camera_a04b5fdf888820779329b982e3f7cc635}
-Float to hold information about vertical camera. 
+\hypertarget{class_camera_a2b4d70e845ce688971b9ae32cf47dc45}{}\index{Camera@{Camera}!Vert\+\_\+\+Cam\+\_\+angle@{Vert\+\_\+\+Cam\+\_\+angle}}
+\index{Vert\+\_\+\+Cam\+\_\+angle@{Vert\+\_\+\+Cam\+\_\+angle}!Camera@{Camera}}
+\subsubsection[{Vert\+\_\+\+Cam\+\_\+angle}]{\setlength{\rightskip}{0pt plus 5cm}G\+Lfloat Camera\+::\+Vert\+\_\+\+Cam\+\_\+angle = 0}\label{class_camera_a2b4d70e845ce688971b9ae32cf47dc45}
+Float to hold information about vertical camera angle. 
 
-Definition at line 26 of file Camera.\+h.
-
-\hypertarget{class_camera_ab968e0816b2909fddcd19886e0fae3f0}{}\index{Camera@{Camera}!X\+\_\+\+Mov@{X\+\_\+\+Mov}}
-\index{X\+\_\+\+Mov@{X\+\_\+\+Mov}!Camera@{Camera}}
-\subsubsection[{X\+\_\+\+Mov}]{\setlength{\rightskip}{0pt plus 5cm}glm\+::vec3 Camera\+::\+X\+\_\+\+Mov}\label{class_camera_ab968e0816b2909fddcd19886e0fae3f0}
-3\+D Floating point vector for X movement. 
-
-Definition at line 30 of file Camera.\+h.
-
-\hypertarget{class_camera_ae0e1410bf317b08212f1ce3b0b8fc18a}{}\index{Camera@{Camera}!Z\+\_\+\+Mov@{Z\+\_\+\+Mov}}
-\index{Z\+\_\+\+Mov@{Z\+\_\+\+Mov}!Camera@{Camera}}
-\subsubsection[{Z\+\_\+\+Mov}]{\setlength{\rightskip}{0pt plus 5cm}glm\+::vec3 Camera\+::\+Z\+\_\+\+Mov}\label{class_camera_ae0e1410bf317b08212f1ce3b0b8fc18a}
-3\+D Floating point vector for Z movement. 
-
-Definition at line 29 of file Camera.\+h.
+Definition at line 31 of file Camera.\+h.
 
 
 

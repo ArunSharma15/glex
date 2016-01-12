@@ -1,0 +1,44 @@
+e496568 was Arun, 3 hours ago, message: Added doxygen comments + more colours to blockworld
+8c4a5e4 was Arun, 23 hours ago, message: travis attempt
+b028e9c was Arun, 23 hours ago, message: fixed travis
+1ecdf86 was Arun, 23 hours ago, message: updated doxygen + added travis
+09d2d5b was Arun, 3 days ago, message: added block array + camera class
+5c009b4 was Arun, 5 weeks ago, message: Added Doxygen Documentation Added 3D Cube Coordinates
+c6b6892 was Arun Sharma (student), 10 weeks ago, message: Removing previously committed object files.
+3816a90 was Arun Sharma (student), 10 weeks ago, message: Changed the background colour.
+c36cd99 was Shane Smith (student), 10 weeks ago, message: Checking pull and push requests from other Repository
+665133d was Shane Smith (student), 3 months ago, message: Added Glex to my Repository
+8f4bd2e was Aidan Delaney, 3 months ago, message: Update bundled version of boost.m4
+1123352 was Aidan Delaney, 1 year, 2 months ago, message: Added licence
+999746c was Aidan Delaney, 1 year, 2 months ago, message: Improved documentation on GameAssetManager and others.
+ba6de4b was Aidan Delaney, 1 year, 2 months ago, message: Fixed spelling mistake.
+babe72f was Aidan Delaney, 1 year, 4 months ago, message: Updated readme with DEBUG build instructions.
+bb22731 was Aidan Delaney, 1 year, 4 months ago, message: Added missing header file
+47db162 was Aidan Delaney, 1 year, 4 months ago, message: Added readme
+5e75549 was Aidan Delaney, 1 year, 4 months ago, message: Corrected projection matrix in shaders.
+72f84d0 was Aidan Delaney, 1 year, 4 months ago, message: Removed camera (no need to introduce this complexity at this stage)
+7c116b5 was Aidan Delaney, 1 year, 4 months ago, message: Enable OpenGL depth testing
+197d768 was Aidan Delaney, 1 year, 4 months ago, message: Added camera to shaders and better validation to Cube draw method.
+78f60fa was Aidan Delaney, 1 year, 4 months ago, message: checkGLError only has an implementation if -DDEBUG is provided. Passing all of the vertex & element buffer to the GPU now.
+5ffd3fd was Aidan Delaney, 1 year, 4 months ago, message: Changed background colour and window title.
+4f86317 was Aidan Delaney, 1 year, 4 months ago, message: Added rotate and scale shaders as copies of the translate one.
+fec829c was Aidan Delaney, 1 year, 4 months ago, message: Add command line parsing.
+63c92c7 was Aidan Delaney, 1 year, 4 months ago, message: Clean up the array initialisation in CubeAsset.
+7cc6748 was Aidan Delaney, 1 year, 4 months ago, message: Change window title
+455ed5e was Aidan Delaney, 1 year, 4 months ago, message: Don't take a colour from the user, hardcode it.
+a28faa4 was Aidan Delaney, 1 year, 4 months ago, message: Don't pass a GLuint * to the CPU and tell the thing to draw GL_UNSIGNED_SHORT!
+ddea9f4 was Aidan Delaney, 1 year, 4 months ago, message: Disable backface culling for debug purposes.
+7022524 was Aidan Delaney, 1 year, 4 months ago, message: Include cerr and endl in CubeAsset
+e1c6663 was Aidan Delaney, 1 year, 4 months ago, message: Make GL error reporting more verbose.
+077f812 was Aidan Delaney, 1 year, 4 months ago, message: Put the near and far clipping planes "in front" of the user.
+13a828a was Aidan Delaney, 1 year, 4 months ago, message: Create a GameWorld that contains a GameAssetManager
+353c9bc was Aidan Delaney, 1 year, 4 months ago, message: Downgrade to GLSL 1.3 due to Intel hardware support.
+9a4aec4 was Aidan Delaney, 1 year, 4 months ago, message: Improved the feedback when a shader fails to compile. Actually compile shaders in constructor.
+d05c9f5 was Aidan Delaney, 1 year, 4 months ago, message: Some occurances of window should have been _window.
+771bdff was Aidan Delaney, 1 year, 4 months ago, message: GameAssetManager is no-longer a singleton Added GameAssetManager to GameWorld
+174f1e6 was Aidan Delaney, 1 year, 4 months ago, message: Initialise some Cube buffers on GPU
+cae65f7 was Aidan Delaney, 1 year, 4 months ago, message: Added a partial cube as an asset.
+dbc9c94 was Aidan Delaney, 1 year, 4 months ago, message: Don't return -1 as a uint, just bail.
+7e6ecdf was Aidan Delaney, 1 year, 4 months ago, message: Added shader loading code to GameAssetManager   * Moved GL defines to the make system
+6f2c845 was Aidan Delaney, 1 year, 4 months ago, message: Stubbed out some of the management structure.
+7bac8c9 was Aidan Delaney, 1 year, 4 months ago, message: initial boilerplate

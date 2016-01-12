@@ -2,7 +2,7 @@
 #include "Camera.h"
 #include <glm/ext.hpp>
 
-CubeAsset::CubeAsset(GLfloat x, GLfloat y, GLfloat z, GLfloat r, GLfloat g, GLfloat b) { /*!Send vertice maniplation and RGB colour values for the cube.*/
+CubeAsset::CubeAsset(GLfloat x, GLfloat y, GLfloat z, GLfloat r, GLfloat g, GLfloat b) : model_matrix(glm::mat4(1.0)){ /*!Send vertice maniplation and RGB colour values for the cube.*/
    GLfloat vertex_buffer [] {
     
    -0.5f+x,-0.5f+y,-0.5f+z, //Vertex 0
@@ -91,6 +91,8 @@ CubeAsset::CubeAsset(GLfloat x, GLfloat y, GLfloat z, GLfloat r, GLfloat g, GLfl
   // immediately bind the buffer and transfer the data
   glBindBuffer(GL_ELEMENT_ARRAY_BUFFER,element_buffer_token);
   glBufferData(GL_ELEMENT_ARRAY_BUFFER,element_buffer_length,element_buffer,GL_STATIC_DRAW);
+  
+  rotateX(0.0f);
 }
 
 CubeAsset::~CubeAsset() {
@@ -117,6 +119,8 @@ void CubeAsset::Draw(GLuint program_token) {
     return;
   }
   
+  
+  
   //glm::mat4 model      = glm::mat4(1.0f);
   //model = glm::rotate(model, 45.0f, glm::vec3(1.0f, 0.0f, 0.0f));
   //glUniformMatrix4fv(0, 1, GL_FALSE, &model[0][0]);
@@ -142,8 +146,19 @@ void CubeAsset::Draw(GLuint program_token) {
   GLuint position_attrib = glGetAttribLocation(program_token, "position");
   checkGLError();
 
+  //Possibly remove
+  GLuint model_uniform =  glGetUniformLocation(program_token, "model");
+  
+
   glUseProgram(program_token);
   checkGLError();
+  
+    //glm::vec3 unit_x_axis(1.0,0.0,0.0);
+    //possible remove 3
+    //glm::mat4 id(1.0);
+   //glm::mat4 model_matrix = glm::rotate(id,45.0f,unit_x_axis);
+	//possible remove 2
+   glUniformMatrix4fv(model_uniform, 1, false, glm::value_ptr(model_matrix));
 
   // use the previously transferred buffer as the vertex array.  This way
   // we transfer the buffer once -- at construction -- not on every frame.
@@ -186,4 +201,12 @@ void CubeAsset::Draw(GLuint program_token) {
   checkGLError();
 
   glDisableVertexAttribArray(position_attrib);
+}
+
+void CubeAsset::rotateX(float angle){
+	
+    glm::vec3 unit_x_axis(1.0,0.0,0.0);
+   model_matrix = glm::rotate(this->model_matrix,angle,unit_x_axis);
+   
+	
 }

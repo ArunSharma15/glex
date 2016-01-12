@@ -6,8 +6,7 @@
 
 
 
-Inheritance diagram for Pyramid\+Asset\+:
-\nopagebreak
+Inheritance diagram for Pyramid\+Asset\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -16,8 +15,7 @@ Inheritance diagram for Pyramid\+Asset\+:
 \end{figure}
 
 
-Collaboration diagram for Pyramid\+Asset\+:
-\nopagebreak
+Collaboration diagram for Pyramid\+Asset\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -27,7 +25,7 @@ Collaboration diagram for Pyramid\+Asset\+:
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_pyramid_asset_a9416c9f36aebef2bf217fc8f3bdf08ce}{Pyramid\+Asset} (int x, int y, int z)
+\hyperlink{class_pyramid_asset_a7ee5d5547c6b6b3595af4ee512b75ba0}{Pyramid\+Asset} (G\+Lfloat x, G\+Lfloat y, G\+Lfloat z, G\+Lfloat r, G\+Lfloat g, G\+Lfloat b)
 \item 
 \hyperlink{class_pyramid_asset_afb388a196f43a3808b2d4f6fdb89ee84}{$\sim$\+Pyramid\+Asset} ()
 \item 
@@ -43,29 +41,36 @@ void \hyperlink{class_pyramid_asset_a34350044042e0098446dc9e0a260cb70}{check\+Er
 \item 
 G\+Luint \hyperlink{class_pyramid_asset_a5566105859271b493eab3b5f9c02f866}{element\+\_\+buffer\+\_\+length}
 \item 
-G\+Luint \hyperlink{class_pyramid_asset_a54d9cec42bc77d07a66e6c1cd55049b0}{vertex\+\_\+buffer\+\_\+token}
+G\+Luint \hyperlink{class_pyramid_asset_addd87a747d7bd186bd1b3e3070185c69}{colour\+\_\+buffer\+\_\+length}
 \item 
 G\+Luint \hyperlink{class_pyramid_asset_a6f7e2f50904d2941e33df8eb7f5f9c2d}{element\+\_\+buffer\+\_\+token}
+\item 
+G\+Luint \hyperlink{class_pyramid_asset_a54d9cec42bc77d07a66e6c1cd55049b0}{vertex\+\_\+buffer\+\_\+token}
+\item 
+G\+Luint \hyperlink{class_pyramid_asset_a1c82b429f52d92feefacb5755017aec0}{colour\+\_\+buffer\+\_\+token}
 \end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
+Pyramid Asset Class -\/ Resonsible for storing structure of Cube class and drawing. 
 
-
-Definition at line 13 of file Pyramid\+Asset.\+h.
+Definition at line 16 of file Pyramid\+Asset.\+h.
 
 
 
 \subsection{Constructor \& Destructor Documentation}
-\hypertarget{class_pyramid_asset_a9416c9f36aebef2bf217fc8f3bdf08ce}{}\index{Pyramid\+Asset@{Pyramid\+Asset}!Pyramid\+Asset@{Pyramid\+Asset}}
+\hypertarget{class_pyramid_asset_a7ee5d5547c6b6b3595af4ee512b75ba0}{}\index{Pyramid\+Asset@{Pyramid\+Asset}!Pyramid\+Asset@{Pyramid\+Asset}}
 \index{Pyramid\+Asset@{Pyramid\+Asset}!Pyramid\+Asset@{Pyramid\+Asset}}
-\subsubsection[{Pyramid\+Asset(int x, int y, int z)}]{\setlength{\rightskip}{0pt plus 5cm}Pyramid\+Asset\+::\+Pyramid\+Asset (
+\subsubsection[{Pyramid\+Asset(\+G\+Lfloat x, G\+Lfloat y, G\+Lfloat z, G\+Lfloat r, G\+Lfloat g, G\+Lfloat b)}]{\setlength{\rightskip}{0pt plus 5cm}Pyramid\+Asset\+::\+Pyramid\+Asset (
 \begin{DoxyParamCaption}
-\item[{int}]{x, }
-\item[{int}]{y, }
-\item[{int}]{z}
+\item[{G\+Lfloat}]{x, }
+\item[{G\+Lfloat}]{y, }
+\item[{G\+Lfloat}]{z, }
+\item[{G\+Lfloat}]{r, }
+\item[{G\+Lfloat}]{g, }
+\item[{G\+Lfloat}]{b}
 \end{DoxyParamCaption}
-)}\label{class_pyramid_asset_a9416c9f36aebef2bf217fc8f3bdf08ce}
+)}\label{class_pyramid_asset_a7ee5d5547c6b6b3595af4ee512b75ba0}
 Pyramid Class -\/ Responsible for spawning a pyramid to the block world. X,Y,Z coordinates for each pyramid. 
 
 Definition at line 8 of file Pyramid\+Asset.\+cc.
@@ -77,9 +82,9 @@ Definition at line 8 of file Pyramid\+Asset.\+cc.
 {}
 \end{DoxyParamCaption}
 )}\label{class_pyramid_asset_afb388a196f43a3808b2d4f6fdb89ee84}
+Constructor -\/ Intialise vertices of pyramid. 
 
-
-Definition at line 52 of file Pyramid\+Asset.\+cc.
+Definition at line 80 of file Pyramid\+Asset.\+cc.
 
 
 
@@ -92,9 +97,9 @@ Definition at line 52 of file Pyramid\+Asset.\+cc.
 \item[{int}]{line}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [private]}}\label{class_pyramid_asset_a34350044042e0098446dc9e0a260cb70}
+Check error 
 
-
-Definition at line 63 of file Pyramid\+Asset.\+cc.
+Definition at line 91 of file Pyramid\+Asset.\+cc.
 
 \hypertarget{class_pyramid_asset_aaea45da4956d79ec9ab96e9d0ccef3fe}{}\index{Pyramid\+Asset@{Pyramid\+Asset}!Draw@{Draw}}
 \index{Draw@{Draw}!Pyramid\+Asset@{Pyramid\+Asset}}
@@ -103,37 +108,51 @@ Definition at line 63 of file Pyramid\+Asset.\+cc.
 \item[{G\+Luint}]{program\+\_\+token}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_pyramid_asset_aaea45da4956d79ec9ab96e9d0ccef3fe}
-
+Resonsible for drawing and transferring information about pyramid. 
 
 Implements \hyperlink{class_game_asset_a961aa51ca0a9961fc584c0b5d5431300}{Game\+Asset}.
 
 
 
-Definition at line 71 of file Pyramid\+Asset.\+cc.
+Definition at line 99 of file Pyramid\+Asset.\+cc.
 
 
 
 \subsection{Member Data Documentation}
+\hypertarget{class_pyramid_asset_addd87a747d7bd186bd1b3e3070185c69}{}\index{Pyramid\+Asset@{Pyramid\+Asset}!colour\+\_\+buffer\+\_\+length@{colour\+\_\+buffer\+\_\+length}}
+\index{colour\+\_\+buffer\+\_\+length@{colour\+\_\+buffer\+\_\+length}!Pyramid\+Asset@{Pyramid\+Asset}}
+\subsubsection[{colour\+\_\+buffer\+\_\+length}]{\setlength{\rightskip}{0pt plus 5cm}G\+Luint Pyramid\+Asset\+::colour\+\_\+buffer\+\_\+length\hspace{0.3cm}{\ttfamily [private]}}\label{class_pyramid_asset_addd87a747d7bd186bd1b3e3070185c69}
+Create a uniformly coloured cube, which means fill in all the triangles with the same R\+G\+B value. 
+
+Definition at line 24 of file Pyramid\+Asset.\+h.
+
+\hypertarget{class_pyramid_asset_a1c82b429f52d92feefacb5755017aec0}{}\index{Pyramid\+Asset@{Pyramid\+Asset}!colour\+\_\+buffer\+\_\+token@{colour\+\_\+buffer\+\_\+token}}
+\index{colour\+\_\+buffer\+\_\+token@{colour\+\_\+buffer\+\_\+token}!Pyramid\+Asset@{Pyramid\+Asset}}
+\subsubsection[{colour\+\_\+buffer\+\_\+token}]{\setlength{\rightskip}{0pt plus 5cm}G\+Luint Pyramid\+Asset\+::colour\+\_\+buffer\+\_\+token\hspace{0.3cm}{\ttfamily [private]}}\label{class_pyramid_asset_a1c82b429f52d92feefacb5755017aec0}
+
+
+Definition at line 28 of file Pyramid\+Asset.\+h.
+
 \hypertarget{class_pyramid_asset_a5566105859271b493eab3b5f9c02f866}{}\index{Pyramid\+Asset@{Pyramid\+Asset}!element\+\_\+buffer\+\_\+length@{element\+\_\+buffer\+\_\+length}}
 \index{element\+\_\+buffer\+\_\+length@{element\+\_\+buffer\+\_\+length}!Pyramid\+Asset@{Pyramid\+Asset}}
 \subsubsection[{element\+\_\+buffer\+\_\+length}]{\setlength{\rightskip}{0pt plus 5cm}G\+Luint Pyramid\+Asset\+::element\+\_\+buffer\+\_\+length\hspace{0.3cm}{\ttfamily [private]}}\label{class_pyramid_asset_a5566105859271b493eab3b5f9c02f866}
+Create triangles for each face of the pyramid, 3 vertex points create a triangle, 2 triangles for the pyramid square base + 4 to form apex. 
 
-
-Definition at line 20 of file Pyramid\+Asset.\+h.
+Definition at line 23 of file Pyramid\+Asset.\+h.
 
 \hypertarget{class_pyramid_asset_a6f7e2f50904d2941e33df8eb7f5f9c2d}{}\index{Pyramid\+Asset@{Pyramid\+Asset}!element\+\_\+buffer\+\_\+token@{element\+\_\+buffer\+\_\+token}}
 \index{element\+\_\+buffer\+\_\+token@{element\+\_\+buffer\+\_\+token}!Pyramid\+Asset@{Pyramid\+Asset}}
 \subsubsection[{element\+\_\+buffer\+\_\+token}]{\setlength{\rightskip}{0pt plus 5cm}G\+Luint Pyramid\+Asset\+::element\+\_\+buffer\+\_\+token\hspace{0.3cm}{\ttfamily [private]}}\label{class_pyramid_asset_a6f7e2f50904d2941e33df8eb7f5f9c2d}
 
 
-Definition at line 21 of file Pyramid\+Asset.\+h.
+Definition at line 25 of file Pyramid\+Asset.\+h.
 
 \hypertarget{class_pyramid_asset_a54d9cec42bc77d07a66e6c1cd55049b0}{}\index{Pyramid\+Asset@{Pyramid\+Asset}!vertex\+\_\+buffer\+\_\+token@{vertex\+\_\+buffer\+\_\+token}}
 \index{vertex\+\_\+buffer\+\_\+token@{vertex\+\_\+buffer\+\_\+token}!Pyramid\+Asset@{Pyramid\+Asset}}
 \subsubsection[{vertex\+\_\+buffer\+\_\+token}]{\setlength{\rightskip}{0pt plus 5cm}G\+Luint Pyramid\+Asset\+::vertex\+\_\+buffer\+\_\+token\hspace{0.3cm}{\ttfamily [private]}}\label{class_pyramid_asset_a54d9cec42bc77d07a66e6c1cd55049b0}
+Resonsible for storing vertices of the pyramid. 
 
-
-Definition at line 21 of file Pyramid\+Asset.\+h.
+Definition at line 26 of file Pyramid\+Asset.\+h.
 
 
 

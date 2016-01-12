@@ -12,7 +12,7 @@ var dir_68267d1309a1af8e8297ef4c3efbcdba =
     [ "GameAsset.h", "_game_asset_8h.html", [
       [ "GameAsset", "class_game_asset.html", "class_game_asset" ]
     ] ],
-    [ "GameAssetManager.cc", "_game_asset_manager_8cc.html", null ],
+    [ "GameAssetManager.cc", "_game_asset_manager_8cc.html", "_game_asset_manager_8cc" ],
     [ "GameAssetManager.h", "_game_asset_manager_8h.html", [
       [ "GameAssetManager", "class_game_asset_manager.html", "class_game_asset_manager" ]
     ] ],

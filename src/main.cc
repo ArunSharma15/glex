@@ -12,6 +12,7 @@
 #include "common.h"
 #include "GameWorld.h"
 #include "Camera.h"
+#include "CubeAsset.h"
 
 /*
  * SDL timers run in separate threads.  In the timer thread
@@ -171,6 +172,7 @@ int main(int argc, char ** argv) {
     case SDLK_w:			//w
       	std::cout << "W" << std::endl;
         cam -> CameraMov('w',2,2);
+       // CubeAsset::rotateX(30.0f);
       break;
     case SDLK_a:			//a
       	std::cout << "A" << std::endl;

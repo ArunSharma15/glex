@@ -1,7 +1,12 @@
 #include "GameWorld.h"
 #include <Camera.h>
 #include <PyramidAsset.h>
-/*! GameWorld class - responsible for holding information about the world and applying draw commands*/
+/*! GameWorld class - responsible for holding information about the world and applying draw commands
+ * 
+ * 
+ *
+ * 
+ * */
 GameWorld::GameWorld (ApplicationMode mode) {
   asset_manager = std::make_shared<GameAssetManager>(mode);
 
@@ -19,7 +24,7 @@ GameWorld::GameWorld (ApplicationMode mode) {
   { 1,1,1,1,1,1,1},
   { 1,1,1,1,1,4,1}  
 };
-    
+   
   // 1 = Sand/Yellow Blocks
   // 2 = Wood/Brown Blocks
   // 4 = Clouds/White Blocks
