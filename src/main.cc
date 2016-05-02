@@ -49,8 +49,8 @@ void Draw(const std::shared_ptr<SDL_Window> window, const std::shared_ptr<GameWo
 }
 
 std::shared_ptr<SDL_Window> InitWorld() {
-  Uint32 width = 1280;
-  Uint32 height = 720;
+  Uint32 width = 640;
+  Uint32 height = 480;
   SDL_Window * _window;
   std::shared_ptr<SDL_Window> window;
 
@@ -144,18 +144,26 @@ ApplicationMode ParseOptions (int argc, char ** argv) {
 int main(int argc, char ** argv) {
   Uint32 delay = 1000/60; // in milliseconds
 
-  auto cam = std::make_shared<Camera>();
+
   auto mode = ParseOptions(argc, argv);
   auto window = InitWorld();
   auto game_world = std::make_shared<GameWorld>(mode);
+  
+  int mouseX;
+  int mouseY;
+  const Uint8 *keyboard_state;
+  Input input_direction = NILL;
+  
   if(!window) {
     SDL_Quit();
   }
 	
-  
+  Draw(window, game_world);    
 	
   // Call the function "tick" every delay milliseconds
   SDL_AddTimer(delay, tick, NULL);
+
+	SDL_SetRelativeMouseMode(SDL_TRUE);
 
 // Add the main event loop
   SDL_Event event;
@@ -164,31 +172,45 @@ int main(int argc, char ** argv) {
     case SDL_QUIT:
       SDL_Quit();
       break;
+      
     case SDL_USEREVENT:
-      Draw(window,game_world);
-      break;
-    case SDL_KEYDOWN:			
-    switch (event.key.keysym.sym) {
-    case SDLK_w:			//w
-      	std::cout << "W" << std::endl;
-        cam -> CameraMov('w',2,2);
-       // CubeAsset::rotateX(30.0f);
-      break;
-    case SDLK_a:			//a
-      	std::cout << "A" << std::endl;
-      	cam -> CameraMov('a',2,2);
-      break;
-    case SDLK_s:			//s
-	std::cout << "S" << std::endl;
-	cam -> CameraMov('s',2,2);
-      break;
-    case SDLK_d:			//d
-      	std::cout << "D" << std::endl;
-      	cam -> CameraMov('d',2,2);
-      break;
-    default:
-      break;
+		SDL_GetRelativeMouseState(&mouseX, &mouseY);
+			
+		keyboard_state = SDL_GetKeyboardState(NULL);
+		
+		if(keyboard_state[SDL_SCANCODE_A])
+		{
+		input_direction = LEFT;
+		}
+			else if(keyboard_state[SDL_SCANCODE_S])
+			{
+			input_direction = DOWN;
+			}
+				else if(keyboard_state[SDL_SCANCODE_W])
+				{
+				input_direction = UP;
+				}
+					else if(keyboard_state[SDL_SCANCODE_D])
+					{
+					input_direction = RIGHT;
+					}
+						else if(keyboard_state[SDL_SCANCODE_ESCAPE])
+						{
+						SDL_Quit();
+						}
+							else{
+							input_direction = NILL;
+							}
+								game_world->UpdateCameraPosition(input_direction,mouseX,mouseY);
+								Draw(window,game_world);
+								break;
+							
+	default:
+	break;
       }
     }
+
   }
-}
+     // game_world->UpdateCameraPosition(input_direction,mouseX,mouseY);
+     // Draw(window, game_world);  
+

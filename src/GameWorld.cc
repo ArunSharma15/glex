@@ -1,6 +1,5 @@
 #include "GameWorld.h"
-#include <Camera.h>
-#include <PyramidAsset.h>
+
 /*! GameWorld class - responsible for holding information about the world and applying draw commands
  * 
  * 
@@ -65,8 +64,12 @@ GameWorld::GameWorld (ApplicationMode mode) {
 }
 
 void GameWorld::Draw() {
-  //auto cam = std::shared_ptr<Camera>();
-  //cam -> CameraMov();
+
   asset_manager->Draw();
 }
 
+void GameWorld::UpdateCameraPosition(Input input_direction, int mouseX, int mouseY){
+	
+asset_manager->UpdateCameraPosition(input_direction, mouseX, mouseY);	
+	
+}

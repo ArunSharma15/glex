@@ -1,5 +1,5 @@
 #include "GameAssetManager.h"
-#include "Camera.h"
+
 class Camera cam;
 /**
  * Creates a GameAssetManager to load the correct shaders based on the
@@ -23,9 +23,20 @@ GameAssetManager::GameAssetManager(ApplicationMode mode) {
 
   program_token = CreateGLProgram(vertex_shader, fragment_shader);
   
-   
+  glUseProgram(program_token);
+  projectionMatrix_link = glGetUniformLocation(program_token, "projectionMatrix");
+  translateMatrix_link  = glGetUniformLocation(program_token, "translateMatrix");
+  viewMatrix_link = glGetUniformLocation(program_token, "viewMatrix");
   
+  projectionMatrix = glm::perspective(glm::radians(45.0f), (float) 640/ (float) 480,0.1f,1000.0f);
 }
+
+void GameAssetManager::UpdateCameraPosition(Input input_Direction, int mouseX, int mouseY){
+
+viewMatrix = camera.UpdateCameraPosition(input_Direction, mouseX, mouseY);	
+	
+}
+
 
 /**
  * Deletes a GameAssetManager, in particular it will clean up any modifications
@@ -70,10 +81,14 @@ void GameAssetManager::AddAsset(std::shared_ptr<GameAsset> the_asset) {
  * Draws each GameAsset in the scene graph.
  */
 void GameAssetManager::Draw() {
+  //glUseProgram(this->program_token);
   for(auto ga: draw_list) {
 	  
-	 	  
-    ga->Draw(program_token);
+	glUniformMatrix4fv(projectionMatrix_link, 1, GL_FALSE, &projectionMatrix[0][0]);
+		glUniformMatrix4fv(viewMatrix_link, 1, GL_FALSE, &viewMatrix[0][0]);
+			glUniformMatrix4fv(translateMatrix_link, 1, GL_FALSE, &translateMatrix[0][0]);
+	
+				ga->Draw(program_token);
   }
 }
 
@@ -103,6 +118,7 @@ GLuint GameAssetManager::CreateGLProgram(std::string & vertex_shader
     glDeleteProgram(program);
     exit(-1);
   }
+  std::cout << "Program token : " << program << std::endl;
   return program;
 }
 

@@ -1,8 +1,7 @@
 #include "CubeAsset.h"
-#include "Camera.h"
-#include <glm/ext.hpp>
 
-CubeAsset::CubeAsset(GLfloat x, GLfloat y, GLfloat z, GLfloat r, GLfloat g, GLfloat b) : model_matrix(glm::mat4(1.0)){ /*!Send vertice maniplation and RGB colour values for the cube.*/
+
+CubeAsset::CubeAsset(GLfloat x, GLfloat y, GLfloat z, GLfloat r, GLfloat g, GLfloat b){ /*!Send vertice maniplation and RGB colour values for the cube.*/
    GLfloat vertex_buffer [] {
     
    -0.5f+x,-0.5f+y,-0.5f+z, //Vertex 0
@@ -114,8 +113,8 @@ void checkError(std::string file, int line) {
 }
 
 void CubeAsset::Draw(GLuint program_token) {
-  if(!glIsProgram(program_token)) {
-    std::cerr << "Drawing Cube with invalid program" << std::endl;
+  if(GL_TRUE != glIsProgram(program_token)) {
+    std::cerr << "Drawing Cube with invalid program : " << program_token << std::endl;
     return;
   }
   
@@ -150,7 +149,7 @@ void CubeAsset::Draw(GLuint program_token) {
   GLuint model_uniform =  glGetUniformLocation(program_token, "model");
   
 
-  glUseProgram(program_token);
+  //glUseProgram(program_token);
   checkGLError();
   
     //glm::vec3 unit_x_axis(1.0,0.0,0.0);

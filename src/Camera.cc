@@ -1,58 +1,64 @@
-#include <Camera.h>
-#include <GameWorld.h>
-#include <CubeAsset.h>
-#include <GameAssetManager.h>
+#include "Camera.h"
 #include <glm/ext.hpp>
 //An attempt based on the tutorial www.opengl-tutorial.org/beginners-tutorials/tutorial-6-keyboard-and-mouse/
 
 
-Camera::Camera(){
+Camera::Camera()
+{
 	
+	cameraPosition = glm::vec3(-20.0f,10.0f,-40.0f);
+	direction = glm::vec3(0,0,0);
+	right = glm::vec3(0,0,0);
+	up = glm::vec3(0,0,0);
+	
+	horizontalAngle = 0;
+	verticalAngle = 0;
+	
+	mouseDeltaX = 1;
+	mouseDeltaY = 1;
+	
+	cameraMovementSpeed = 0.25;
 	
 }
 
-void Camera::CameraKeys(char press){
-	/**List of if conditons that will modify camera position if certain key presses are sent to it. */
-	/**Pretty much empty */
+glm::mat4 Camera::UpdateCameraPosition(Input input_Direction, int mouseX, int mouseY)
+{
+	
+mouseDeltaX = -mouseX;
+mouseDeltaY = -mouseY;
 
+horizontalAngle += 0.01 * mouseDeltaX;
+
+if((verticalAngle + (0.01 * mouseDeltaY)) < 1 && (verticalAngle + (0.01 * mouseDeltaY)) -1 )
+{
+	verticalAngle += 0.01 * mouseDeltaY;
 }
 
-glm::mat4 Camera::CameraMov(char press, int mX, int mY){
-	
-	mX = -mX;
-	mY = -mY;
-	
-	Horiz_Cam_angle += 1 * mY;
-	Vert_Cam_angle += 1 * mX;
-	
-	/*! Switch case statement is better than using lots of IF Statements.*/
-	switch(press){
-	
-	case 'w':
-	//Camera_Pos += glm::vec3(cos(Vert_Cam_angle) * sin(Horiz_Cam_angle), 0,cos(Vert_Cam_angle) * cos(Horiz_Cam_angle)) * Player_Speed;
-	std::cout << "W Cam Class" << std::endl;
-	break;
-	
-	case 'a':
-	//Camera_Pos -= right * Player_Speed;
-	break;
-	
-	case 's':
-	//Camera_Pos += right * Player_Speed;
-	break;
-	
-	case 'd':
-	//Camera_Pos -= glm::vec3(cos(Vert_Cam_angle) * sin(Horiz_Cam_angle), 0,cos(Vert_Cam_angle) * cos(Horiz_Cam_angle)) * Player_Speed;
-	break;
-	
-	default:
-	
-	break;
-	
-	
-	}
+direction = glm::vec3(cos(verticalAngle) * sin(horizontalAngle),sin(verticalAngle),cos(verticalAngle) * cos(horizontalAngle));
 
-	
+right = glm::vec3(sin(horizontalAngle - 3.14/2.0f),0,cos(horizontalAngle - 3.14/2.0f));
 
+up = glm::cross(right,direction);
+
+if(input_Direction == UP)
+{
+cameraPosition += glm::vec3(cos(verticalAngle) * sin(horizontalAngle), 0,cos(verticalAngle) * cos(horizontalAngle)) * cameraMovementSpeed;
+}	
+
+	else if(input_Direction == DOWN)
+	{
+	cameraPosition -= glm::vec3(cos(verticalAngle) * sin(horizontalAngle), 0,cos(verticalAngle) * cos(horizontalAngle)) * cameraMovementSpeed;
+	} 
+	
+		else if(input_Direction == LEFT)
+		{
+		cameraPosition -= right * cameraMovementSpeed;
+		}
+
+			else if(input_Direction == RIGHT){
+			cameraPosition += right * cameraMovementSpeed;			
+			}
+
+return glm::lookAt(cameraPosition, cameraPosition + direction,up);
 
 }
