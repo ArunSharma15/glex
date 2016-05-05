@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['camera',['Camera',['../class_camera.html',1,'']]],
-  ['cubeasset',['CubeAsset',['../class_cube_asset.html',1,'']]]
+  ['bbox',['BBox',['../class_b_box.html',1,'']]]
 ];

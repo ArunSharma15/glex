@@ -1,7 +1,6 @@
 <map id="src/PyramidAsset.h" name="src/PyramidAsset.h">
-<area shape="rect" id="node2" href="$_game_world_8h.html" title="src/GameWorld.h" alt="" coords="129,80,253,107"/>
-<area shape="rect" id="node4" href="$_game_world_8cc.html" title="src/GameWorld.cc" alt="" coords="253,155,383,181"/>
-<area shape="rect" id="node6" href="$_pyramid_asset_8cc.html" title="src/PyramidAsset.cc" alt="" coords="346,80,490,107"/>
-<area shape="rect" id="node3" href="$_camera_8cc.html" title="src/Camera.cc" alt="" coords="5,155,113,181"/>
-<area shape="rect" id="node5" href="$main_8cc.html" title="src/main.cc" alt="" coords="138,155,229,181"/>
+<area shape="rect" id="node2" href="$_game_world_8h.html" title="src/GameWorld.h" alt="" coords="75,80,199,107"/>
+<area shape="rect" id="node5" href="$_pyramid_asset_8cc.html" title="src/PyramidAsset.cc" alt="" coords="224,80,368,107"/>
+<area shape="rect" id="node3" href="$_game_world_8cc.html" title="src/GameWorld.cc" alt="" coords="5,155,136,181"/>
+<area shape="rect" id="node4" href="$main_8cc.html" title="src/main.cc" alt="" coords="160,155,251,181"/>
 </map>

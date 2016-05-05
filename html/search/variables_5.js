@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['mouse_5fsensitivity',['Mouse_Sensitivity',['../class_camera.html#ada530cf7b97b15431c729ddc3435d702',1,'Camera']]],
-  ['mousedx',['mouseDX',['../class_camera.html#abc15ba4d62277f3f995127bb5d41517f',1,'Camera']]],
-  ['mousedy',['mouseDy',['../class_camera.html#aeee67efd9e51edc7f3bc372c4d323753',1,'Camera']]]
+  ['model_5fmatrix',['model_matrix',['../class_cube_asset.html#a49b69783f209cc8268a8be7d46c803d6',1,'CubeAsset']]],
+  ['mousedeltax',['mouseDeltaX',['../class_camera.html#a38f42e9b04d2180f267af1bdd5b87216',1,'Camera']]],
+  ['mousedeltay',['mouseDeltaY',['../class_camera.html#a65944911597dcfb60e21300ed8c62305',1,'Camera']]]
 ];

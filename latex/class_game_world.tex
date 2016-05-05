@@ -10,6 +10,8 @@
 \hyperlink{class_game_world_a17a84e57a80600961088afc753036f89}{Game\+World} (\hyperlink{common_8h_add86e7c88dd109abea3f708b422f31f0}{Application\+Mode})
 \item 
 void \hyperlink{class_game_world_a275418607d8286979b276f165ad5876b}{Draw} ()
+\item 
+void \hyperlink{class_game_world_aa934714929b8b3bcf322f1ec4695d75b}{Update\+Camera\+Position} (\hyperlink{common_8h_a080a822f0093973313bd644e517a5090}{Input}, int mouse\+X, int mouse\+Y)
 \end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
@@ -37,7 +39,7 @@ We thread the Application\+Mode through the \hyperlink{class_game_world}{Game\+W
 
 \hyperlink{class_game_world}{Game\+World} class -\/ responsible for holding information about the world and applying draw commands 3\+D Array to store block world configuration 
 
-Definition at line 10 of file Game\+World.\+cc.
+Definition at line 9 of file Game\+World.\+cc.
 
 
 
@@ -51,7 +53,20 @@ Definition at line 10 of file Game\+World.\+cc.
 )}\label{class_game_world_a275418607d8286979b276f165ad5876b}
 Calling \hyperlink{class_game_world_a275418607d8286979b276f165ad5876b}{Draw()} will draw the entire world. 
 
-Definition at line 69 of file Game\+World.\+cc.
+Definition at line 66 of file Game\+World.\+cc.
+
+\hypertarget{class_game_world_aa934714929b8b3bcf322f1ec4695d75b}{}\index{Game\+World@{Game\+World}!Update\+Camera\+Position@{Update\+Camera\+Position}}
+\index{Update\+Camera\+Position@{Update\+Camera\+Position}!Game\+World@{Game\+World}}
+\subsubsection[{Update\+Camera\+Position(\+Input, int mouse\+X, int mouse\+Y)}]{\setlength{\rightskip}{0pt plus 5cm}void Game\+World\+::\+Update\+Camera\+Position (
+\begin{DoxyParamCaption}
+\item[{{\bf Input}}]{input\+\_\+direction, }
+\item[{int}]{mouse\+X, }
+\item[{int}]{mouse\+Y}
+\end{DoxyParamCaption}
+)}\label{class_game_world_aa934714929b8b3bcf322f1ec4695d75b}
+
+
+Definition at line 71 of file Game\+World.\+cc.
 
 
 
@@ -61,7 +76,7 @@ Definition at line 69 of file Game\+World.\+cc.
 \subsubsection[{asset\+\_\+manager}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<${\bf Game\+Asset\+Manager}$>$ Game\+World\+::asset\+\_\+manager\hspace{0.3cm}{\ttfamily [private]}}\label{class_game_world_aec5c0bca4fb5a41e4aac2dce2871266d}
 
 
-Definition at line 32 of file Game\+World.\+h.
+Definition at line 35 of file Game\+World.\+h.
 
 
 

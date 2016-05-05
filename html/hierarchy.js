@@ -1,5 +1,6 @@
 var hierarchy =
 [
+    [ "BBox", "class_b_box.html", null ],
     [ "Camera", "class_camera.html", null ],
     [ "GameAsset", "class_game_asset.html", [
       [ "CubeAsset", "class_cube_asset.html", null ],

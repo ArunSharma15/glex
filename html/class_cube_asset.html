@@ -140,6 +140,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ab3ab9a5da82cbf8537a28652410093b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1af568486056e254ffcf98fd99947bfe"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cube_asset.html#a1af568486056e254ffcf98fd99947bfe">Draw</a> (GLuint)</td></tr>
 <tr class="separator:a1af568486056e254ffcf98fd99947bfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3bd98dd1b0a34b3dc4234913e41c3e5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cube_asset.html#ad3bd98dd1b0a34b3dc4234913e41c3e5">rotateX</a> (float)</td></tr>
+<tr class="separator:ad3bd98dd1b0a34b3dc4234913e41c3e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -153,6 +155,8 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a31bd098f60e2c24988316a9cc9335987"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a75f98d346175cd91cdee04f1885f5327"><td class="memItemLeft" align="right" valign="top">GLuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cube_asset.html#a75f98d346175cd91cdee04f1885f5327">colour_buffer_token</a></td></tr>
 <tr class="separator:a75f98d346175cd91cdee04f1885f5327"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49b69783f209cc8268a8be7d46c803d6"><td class="memItemLeft" align="right" valign="top">glm::mat4&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cube_asset.html#a49b69783f209cc8268a8be7d46c803d6">model_matrix</a></td></tr>
+<tr class="separator:a49b69783f209cc8268a8be7d46c803d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Cube Asset Class - Resonsible for storing structure of Cube class and drawing. </p>
@@ -208,7 +212,17 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Send vertice maniplation and RGB colour values for the cube. </p>
 
-<p>Definition at line <a class="el" href="_cube_asset_8cc_source.html#l00005">5</a> of file <a class="el" href="_cube_asset_8cc_source.html">CubeAsset.cc</a>.</p>
+<p>Definition at line <a class="el" href="_cube_asset_8cc_source.html#l00004">4</a> of file <a class="el" href="_cube_asset_8cc_source.html">CubeAsset.cc</a>.</p>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_cube_asset_a0cc99acd753a835e1d10be46cf8a0e5c_cgraph.png" border="0" usemap="#class_cube_asset_a0cc99acd753a835e1d10be46cf8a0e5c_cgraph" alt=""/></div>
+<map name="class_cube_asset_a0cc99acd753a835e1d10be46cf8a0e5c_cgraph" id="class_cube_asset_a0cc99acd753a835e1d10be46cf8a0e5c_cgraph">
+<area shape="rect" id="node2" href="class_cube_asset.html#ad3bd98dd1b0a34b3dc4234913e41c3e5" title="CubeAsset::rotateX" alt="" coords="213,5,351,32"/>
+</map>
+</div>
+</p>
 
 </div>
 </div>
@@ -226,7 +240,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Constructor - Intialise vertices of cube. </p>
 
-<p>Definition at line <a class="el" href="_cube_asset_8cc_source.html#l00096">96</a> of file <a class="el" href="_cube_asset_8cc_source.html">CubeAsset.cc</a>.</p>
+<p>Definition at line <a class="el" href="_cube_asset_8cc_source.html#l00097">97</a> of file <a class="el" href="_cube_asset_8cc_source.html">CubeAsset.cc</a>.</p>
 
 </div>
 </div>
@@ -256,7 +270,25 @@ Private Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="class_game_asset.html#a961aa51ca0a9961fc584c0b5d5431300">GameAsset</a>.</p>
 
-<p>Definition at line <a class="el" href="_cube_asset_8cc_source.html#l00114">114</a> of file <a class="el" href="_cube_asset_8cc_source.html">CubeAsset.cc</a>.</p>
+<p>Definition at line <a class="el" href="_cube_asset_8cc_source.html#l00115">115</a> of file <a class="el" href="_cube_asset_8cc_source.html">CubeAsset.cc</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad3bd98dd1b0a34b3dc4234913e41c3e5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CubeAsset::rotateX </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>angle</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_cube_asset_8cc_source.html#l00205">205</a> of file <a class="el" href="_cube_asset_8cc_source.html">CubeAsset.cc</a>.</p>
 
 </div>
 </div>
@@ -348,6 +380,28 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="_cube_asset_8h_source.html#l00024">24</a> of file <a class="el" href="_cube_asset_8h_source.html">CubeAsset.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a49b69783f209cc8268a8be7d46c803d6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">glm::mat4 CubeAsset::model_matrix</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_cube_asset_8h_source.html#l00028">28</a> of file <a class="el" href="_cube_asset_8h_source.html">CubeAsset.h</a>.</p>
 
 </div>
 </div>

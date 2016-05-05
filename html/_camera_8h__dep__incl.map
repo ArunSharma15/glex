@@ -1,10 +1,9 @@
 <map id="src/Camera.h" name="src/Camera.h">
-<area shape="rect" id="node2" href="$_camera_8cc.html" title="src/Camera.cc" alt="" coords="160,229,268,256"/>
-<area shape="rect" id="node3" href="$_game_asset_manager_8h.html" title="src/GameAssetManager.h" alt="" coords="167,80,341,107"/>
-<area shape="rect" id="node4" href="$_game_asset_manager_8cc.html" title="src/GameAssetManager.cc" alt="" coords="23,155,205,181"/>
-<area shape="rect" id="node5" href="$_game_world_8h.html" title="src/GameWorld.h" alt="" coords="280,155,404,181"/>
-<area shape="rect" id="node6" href="$_game_world_8cc.html" title="src/GameWorld.cc" alt="" coords="293,229,423,256"/>
-<area shape="rect" id="node7" href="$main_8cc.html" title="src/main.cc" alt="" coords="447,229,538,256"/>
-<area shape="rect" id="node8" href="$_cube_asset_8cc.html" title="src/CubeAsset.cc" alt="" coords="531,80,657,107"/>
-<area shape="rect" id="node9" href="$_pyramid_asset_8cc.html" title="src/PyramidAsset.cc" alt="" coords="682,80,826,107"/>
+<area shape="rect" id="node2" href="$_camera_8cc.html" title="src/Camera.cc" alt="" coords="5,80,113,107"/>
+<area shape="rect" id="node3" href="$_game_asset_manager_8h.html" title="src/GameAssetManager.h" alt="" coords="137,80,312,107"/>
+<area shape="rect" id="node5" href="$_game_world_8h.html" title="src/GameWorld.h" alt="" coords="239,155,363,181"/>
+<area shape="rect" id="node7" href="$main_8cc.html" title="src/main.cc" alt="" coords="355,229,446,256"/>
+<area shape="rect" id="node8" href="$_pyramid_asset_8cc.html" title="src/PyramidAsset.cc" alt="" coords="438,80,582,107"/>
+<area shape="rect" id="node4" href="$_game_asset_manager_8cc.html" title="src/GameAssetManager.cc" alt="" coords="33,155,214,181"/>
+<area shape="rect" id="node6" href="$_game_world_8cc.html" title="src/GameWorld.cc" alt="" coords="201,229,331,256"/>
 </map>

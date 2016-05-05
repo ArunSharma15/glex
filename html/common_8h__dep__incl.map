@@ -1,11 +1,10 @@
 <map id="src/common.h" name="src/common.h">
-<area shape="rect" id="node2" href="$_camera_8h.html" title="src/Camera.h" alt="" coords="469,80,571,107"/>
-<area shape="rect" id="node4" href="$_game_asset_manager_8h.html" title="src/GameAssetManager.h" alt="" coords="477,155,651,181"/>
-<area shape="rect" id="node6" href="$_game_world_8h.html" title="src/GameWorld.h" alt="" coords="615,229,739,256"/>
-<area shape="rect" id="node8" href="$main_8cc.html" title="src/main.cc" alt="" coords="745,304,836,331"/>
-<area shape="rect" id="node3" href="$_camera_8cc.html" title="src/Camera.cc" alt="" coords="510,304,618,331"/>
-<area shape="rect" id="node5" href="$_game_asset_manager_8cc.html" title="src/GameAssetManager.cc" alt="" coords="309,229,491,256"/>
-<area shape="rect" id="node7" href="$_game_world_8cc.html" title="src/GameWorld.cc" alt="" coords="239,304,369,331"/>
-<area shape="rect" id="node9" href="$_cube_asset_8cc.html" title="src/CubeAsset.cc" alt="" coords="326,155,453,181"/>
-<area shape="rect" id="node10" href="$_pyramid_asset_8cc.html" title="src/PyramidAsset.cc" alt="" coords="5,155,149,181"/>
+<area shape="rect" id="node2" href="$_camera_8h.html" title="src/Camera.h" alt="" coords="288,80,389,107"/>
+<area shape="rect" id="node4" href="$_game_asset_manager_8h.html" title="src/GameAssetManager.h" alt="" coords="10,155,185,181"/>
+<area shape="rect" id="node6" href="$_game_world_8h.html" title="src/GameWorld.h" alt="" coords="211,229,335,256"/>
+<area shape="rect" id="node8" href="$main_8cc.html" title="src/main.cc" alt="" coords="580,304,671,331"/>
+<area shape="rect" id="node3" href="$_camera_8cc.html" title="src/Camera.cc" alt="" coords="311,155,419,181"/>
+<area shape="rect" id="node9" href="$_pyramid_asset_8cc.html" title="src/PyramidAsset.cc" alt="" coords="444,155,588,181"/>
+<area shape="rect" id="node5" href="$_game_asset_manager_8cc.html" title="src/GameAssetManager.cc" alt="" coords="5,229,187,256"/>
+<area shape="rect" id="node7" href="$_game_world_8cc.html" title="src/GameWorld.cc" alt="" coords="208,304,339,331"/>
 </map>

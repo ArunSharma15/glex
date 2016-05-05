@@ -14,14 +14,15 @@ GameWorld::GameWorld (ApplicationMode mode) {
   /*!3D Array to store block world configuration*/
   int map[7][7][7] = { 
   //Note that actual map is turned on it's side.
-  //<- Back | Front->
-  { 5,5,5,5,5,5,5},
-  { 5,5,5,5,5,5,5}, 
-  { 1,1,1,1,1,4,1},
-  { 1,1,1,1,1,1,1},
-  { 1,2,4,1,1,1,1},
-  { 1,1,1,1,1,1,1},
-  { 1,1,1,1,1,4,1}  
+  //<- Front | Back->
+  // Y = 0				Y = 1			Y=2				Y=3					Y=4				Y=5				Y=6
+  /*x=0*/{{ 1,0,5,0,5,0,5},{ 0,5,0,0,0,0,0},{ 0,0,0,0,0,0,0},{ 0,0,0,0,0,0,0},{ 0,0,0,0,0,0,0},{ 0,0,0,0,0,0,0},{ 0,0,0,0,0,0,0}},
+  /*x=1*/{{ 1,0,5,0,5,0,5},{ 0,5,0,0,0,0,0},{ 0,0,0,0,0,0,0},{ 0,0,0,0,0,0,0},{ 0,0,0,0,0,0,0},{ 0,0,0,0,0,0,0},{ 0,0,0,0,0,0,0}}, 
+  /*x=2*/{{ 1,0,5,0,5,0,5},{ 0,5,0,0,0,0,0},{ 0,0,0,0,0,0,0},{ 0,0,0,0,0,0,0},{ 0,0,0,0,0,0,0},{ 0,0,0,0,0,0,0},{ 0,0,0,0,0,0,0}},
+  /*x=3*/{{ 1,0,5,0,5,0,5},{ 0,5,0,0,0,0,0},{ 0,0,0,0,0,0,0},{ 0,0,0,0,0,0,0},{ 0,0,0,0,0,0,0},{ 0,0,0,0,0,0,0},{ 0,0,0,0,0,0,0}},
+  /*x=4*/{{ 1,0,5,0,5,0,5},{ 0,5,0,0,0,0,0},{ 0,0,0,0,0,0,0},{ 0,0,0,0,0,0,0},{ 0,0,0,0,0,0,0},{ 0,0,0,0,0,0,0},{ 0,0,0,0,0,0,0}},
+  /*x=5*/{{ 1,0,5,0,5,0,5},{ 0,5,0,0,0,0,0},{ 0,0,0,0,0,0,0},{ 0,0,0,0,0,0,0},{ 0,0,0,0,0,0,0},{ 0,0,0,0,0,0,0},{ 0,0,0,0,0,0,0}},
+  /*x=6*/{{ 1,0,5,0,5,0,5},{ 0,5,0,0,0,0,0},{ 0,0,0,0,0,0,0},{ 0,0,0,0,0,0,0},{ 0,0,0,0,0,0,0},{ 0,0,0,0,0,0,0},{ 0,0,0,0,0,0,0}}  
 };
    
   // 1 = Sand/Yellow Blocks
@@ -43,11 +44,11 @@ GameWorld::GameWorld (ApplicationMode mode) {
   
 								   //Sand
 								  //Format as follows(X Pos   , Y Pos   , Z Pos      ,R , G , B )
-  asset_manager->AddAsset(std::make_shared<CubeAsset>(countX-3,-3-countY,0.30*countZ,1.0,1.0,0.0));
+  asset_manager->AddAsset(std::make_shared<CubeAsset>(countX-3,+3+countY,0.30*countZ,1.0,1.0,0.0));
   
   }
   	if(map[countX][countY][countZ] == 2){	//Tree
-	 asset_manager->AddAsset(std::make_shared<CubeAsset>(countX-3,-4-countY,0.30*countZ,0.5,0.35,0.05));
+	 asset_manager->AddAsset(std::make_shared<CubeAsset>(countX-3,+4+countY,0.30*countZ,0.5,0.35,0.05));
 	}
 	
 		if(map[countX][countY][countZ] == 4){ //Clouds
@@ -56,7 +57,7 @@ GameWorld::GameWorld (ApplicationMode mode) {
 		}
 
 		if(map[countX][countY][countZ] == 5){ //Water
-		 asset_manager->AddAsset(std::make_shared<CubeAsset>(countX-3,-3-countY,0.30*countZ,0.0,0.0,1.0));
+		 asset_manager->AddAsset(std::make_shared<CubeAsset>(countX-3,3+countY,0.50*countZ,0.0,0.0,1.0));
 		}
 }
 }

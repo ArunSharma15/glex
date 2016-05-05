@@ -1,5 +1,9 @@
 var dir_68267d1309a1af8e8297ef4c3efbcdba =
 [
+    [ "BBox.cpp", "_b_box_8cpp.html", "_b_box_8cpp" ],
+    [ "BBox.h", "_b_box_8h.html", [
+      [ "BBox", "class_b_box.html", null ]
+    ] ],
     [ "Camera.cc", "_camera_8cc.html", null ],
     [ "Camera.h", "_camera_8h.html", [
       [ "Camera", "class_camera.html", "class_camera" ]

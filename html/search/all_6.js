@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['initworld',['InitWorld',['../main_8cc.html#acab7ade71cf38099442ca5df2495223d',1,'main.cc']]]
+  ['horizontalangle',['horizontalAngle',['../class_camera.html#aad9d573147be409e929251eca0bea339',1,'Camera']]]
 ];

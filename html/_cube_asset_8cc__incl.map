@@ -1,7 +1,4 @@
 <map id="src/CubeAsset.cc" name="src/CubeAsset.cc">
-<area shape="rect" id="node2" href="$_cube_asset_8h.html" title="CubeAsset.h" alt="" coords="247,155,345,181"/>
-<area shape="rect" id="node9" href="$_camera_8h.html" title="Camera.h" alt="" coords="466,80,545,107"/>
-<area shape="rect" id="node7" href="$_game_asset_8h.html" title="GameAsset.h" alt="" coords="289,229,391,256"/>
-<area shape="rect" id="node10" href="$common_8h.html" title="common.h" alt="" coords="499,229,581,256"/>
-<area shape="rect" id="node11" href="$_game_asset_manager_8h.html" title="GameAssetManager.h" alt="" coords="543,155,695,181"/>
+<area shape="rect" id="node2" href="$_cube_asset_8h.html" title="CubeAsset.h" alt="" coords="136,80,235,107"/>
+<area shape="rect" id="node7" href="$_game_asset_8h.html" title="GameAsset.h" alt="" coords="371,155,474,181"/>
 </map>
