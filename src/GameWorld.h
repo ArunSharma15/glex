@@ -31,6 +31,10 @@ class GameWorld {
   
   void UpdateCameraPosition(Input, int mouseX, int mouseY);
   
+  void counter();
+  
+  void bindtest();
+  
  private:
   std::shared_ptr<GameAssetManager> asset_manager;
 };

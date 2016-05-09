@@ -11,8 +11,7 @@ PythonBindings::PythonBindings()
 
 BOOST_PYTHON_MODULE(glex){
 
-	class_<GameAssetManager>("GameWorld")
+	class_<GameWorld>("GameWorld")
 		.def("bindtest",&GameWorld::bindtest)
 		
-	
 }

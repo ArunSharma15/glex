@@ -74,7 +74,7 @@ std::shared_ptr<SDL_Window> InitWorld() {
   atexit(SDL_Quit);
 
   // Create a new window with an OpenGL surface
-  _window = SDL_CreateWindow("CI224 - Assignment 1 - Arun Sharma"
+  _window = SDL_CreateWindow("CI224 - Assignment 2 - Arun Sharma"
                              , SDL_WINDOWPOS_CENTERED
                              , SDL_WINDOWPOS_CENTERED
                              , width
@@ -141,13 +141,18 @@ ApplicationMode ParseOptions (int argc, char ** argv) {
   return TRANSFORM;
 }
 
+
 int main(int argc, char ** argv) {
   Uint32 delay = 1000/60; // in milliseconds
 
-
+ 
+  
+  
   auto mode = ParseOptions(argc, argv);
   auto window = InitWorld();
   auto game_world = std::make_shared<GameWorld>(mode);
+ 
+ 
   
   int mouseX;
   int mouseY;
@@ -172,7 +177,7 @@ int main(int argc, char ** argv) {
     case SDL_QUIT:
       SDL_Quit();
       break;
-      
+				
     case SDL_USEREVENT:
 		SDL_GetRelativeMouseState(&mouseX, &mouseY);
 			
@@ -181,6 +186,7 @@ int main(int argc, char ** argv) {
 		if(keyboard_state[SDL_SCANCODE_A])
 		{
 		input_direction = LEFT;
+		
 		}
 			else if(keyboard_state[SDL_SCANCODE_S])
 			{
@@ -193,6 +199,7 @@ int main(int argc, char ** argv) {
 					else if(keyboard_state[SDL_SCANCODE_D])
 					{
 					input_direction = RIGHT;
+					
 					}
 						else if(keyboard_state[SDL_SCANCODE_ESCAPE])
 						{
@@ -202,10 +209,13 @@ int main(int argc, char ** argv) {
 							input_direction = NILL;
 							}
 								game_world->UpdateCameraPosition(input_direction,mouseX,mouseY);
+								 
 								Draw(window,game_world);
+								
 								break;
 							
 	default:
+	
 	break;
       }
     }
