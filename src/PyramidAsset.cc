@@ -129,6 +129,14 @@ void PyramidAsset::Draw(GLuint program_token) {
 
   glUseProgram(program_token);
   checkGLError();
+  
+  /*TEST CODE - Create animation mat to send to translate shader*/
+  // Then bung in an angle to rotate the clouds around specific point.
+  GLuint animation = glGetUniformLocation(program_token, "animation");
+  angle += 0.001f;
+  ani = glm::rotate(glm::mat4(1.0f),angle,glm::vec3(0,0.5,0));
+  glUniformMatrix4fv(animation,1,GL_FALSE,&ani[0][0]);
+  /*END TEST CODE*/
 
   // use the previously transferred buffer as the vertex array.  This way
   // we transfer the buffer once -- at construction -- not on every frame.

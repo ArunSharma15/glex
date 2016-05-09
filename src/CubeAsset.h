@@ -23,7 +23,7 @@ class CubeAsset : public GameAsset {
   GLuint colour_buffer_length;  /*!< Create a uniformly coloured cube, which means fill in all the triangles with the same RGB value.*/ 
   GLuint element_buffer_token;
   GLuint vertex_buffer_token; /*!< Resonsible for storing vertices of the cube.*/
-  
+    glm::mat4 ani;
   GLuint colour_buffer_token;
   glm::mat4 model_matrix;
 };

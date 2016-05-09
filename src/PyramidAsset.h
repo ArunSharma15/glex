@@ -18,6 +18,8 @@ public:
   PyramidAsset(GLfloat x,GLfloat y, GLfloat z, GLfloat r, GLfloat g, GLfloat b);
   ~PyramidAsset();/*!< Constructor - Intialise vertices of pyramid.*/
   virtual void Draw(GLuint);/*!< Resonsible for drawing and transferring information about pyramid. */
+  glm::mat4 ani;
+  GLfloat angle;
 
 private:
   GLuint element_buffer_length;	/*!< Create triangles for each face of the pyramid, 3 vertex points create a triangle, 2 triangles for the pyramid square base + 4 to form apex. */	

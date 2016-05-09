@@ -152,6 +152,12 @@ void CubeAsset::Draw(GLuint program_token) {
   //glUseProgram(program_token);
   checkGLError();
   
+  //Uncomment these to stop animation for the cubes.
+  GLuint animation = glGetUniformLocation(program_token, "animation");
+
+  glUniformMatrix4fv(animation,1,GL_FALSE,&ani[0][0]);
+  
+  
     //glm::vec3 unit_x_axis(1.0,0.0,0.0);
     //possible remove 3
     //glm::mat4 id(1.0);
