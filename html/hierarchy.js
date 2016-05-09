@@ -8,5 +8,6 @@ var hierarchy =
     ] ],
     [ "GameAssetManager", "class_game_asset_manager.html", null ],
     [ "GameWorld", "class_game_world.html", null ],
+    [ "PythonBindings", "class_python_bindings.html", null ],
     [ "SDLWindowDeleter", "struct_s_d_l_window_deleter.html", null ]
 ];

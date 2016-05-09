@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['model_5fmatrix',['model_matrix',['../class_cube_asset.html#a49b69783f209cc8268a8be7d46c803d6',1,'CubeAsset']]],
-  ['mousedeltax',['mouseDeltaX',['../class_camera.html#a38f42e9b04d2180f267af1bdd5b87216',1,'Camera']]],
-  ['mousedeltay',['mouseDeltaY',['../class_camera.html#a65944911597dcfb60e21300ed8c62305',1,'Camera']]]
+  ['i',['i',['../_game_world_8cc.html#acb559820d9ca11295b4500f179ef6392',1,'GameWorld.cc']]]
 ];

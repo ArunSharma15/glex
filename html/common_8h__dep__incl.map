@@ -1,10 +1,12 @@
 <map id="src/common.h" name="src/common.h">
-<area shape="rect" id="node2" href="$_camera_8h.html" title="src/Camera.h" alt="" coords="288,80,389,107"/>
-<area shape="rect" id="node4" href="$_game_asset_manager_8h.html" title="src/GameAssetManager.h" alt="" coords="10,155,185,181"/>
-<area shape="rect" id="node6" href="$_game_world_8h.html" title="src/GameWorld.h" alt="" coords="211,229,335,256"/>
-<area shape="rect" id="node8" href="$main_8cc.html" title="src/main.cc" alt="" coords="580,304,671,331"/>
-<area shape="rect" id="node3" href="$_camera_8cc.html" title="src/Camera.cc" alt="" coords="311,155,419,181"/>
-<area shape="rect" id="node9" href="$_pyramid_asset_8cc.html" title="src/PyramidAsset.cc" alt="" coords="444,155,588,181"/>
-<area shape="rect" id="node5" href="$_game_asset_manager_8cc.html" title="src/GameAssetManager.cc" alt="" coords="5,229,187,256"/>
-<area shape="rect" id="node7" href="$_game_world_8cc.html" title="src/GameWorld.cc" alt="" coords="208,304,339,331"/>
+<area shape="rect" id="node2" href="$_camera_8h.html" title="src/Camera.h" alt="" coords="421,80,523,107"/>
+<area shape="rect" id="node4" href="$_game_asset_manager_8h.html" title="src/GameAssetManager.h" alt="" coords="93,155,267,181"/>
+<area shape="rect" id="node6" href="$_game_world_8h.html" title="src/GameWorld.h" alt="" coords="373,229,497,256"/>
+<area shape="rect" id="node8" href="$main_8cc.html" title="src/main.cc" alt="" coords="663,304,753,331"/>
+<area shape="rect" id="node10" href="$_python_bindings_8h.html" title="src/PythonBindings.h" alt="" coords="5,304,152,331"/>
+<area shape="rect" id="node3" href="$_camera_8cc.html" title="src/Camera.cc" alt="" coords="343,155,451,181"/>
+<area shape="rect" id="node11" href="$_pyramid_asset_8cc.html" title="src/PyramidAsset.cc" alt="" coords="476,155,620,181"/>
+<area shape="rect" id="node5" href="$_game_asset_manager_8cc.html" title="src/GameAssetManager.cc" alt="" coords="116,229,297,256"/>
+<area shape="rect" id="node9" href="$_python_bindings_8cc.html" title="src/PythonBindings.cc" alt="" coords="258,304,411,331"/>
+<area shape="rect" id="node7" href="$_game_world_8cc.html" title="src/GameWorld.cc" alt="" coords="436,304,567,331"/>
 </map>

@@ -1,6 +1,8 @@
 <map id="src/GameAssetManager.h" name="src/GameAssetManager.h">
-<area shape="rect" id="node2" href="$_game_asset_manager_8cc.html" title="src/GameAssetManager.cc" alt="" coords="5,80,187,107"/>
-<area shape="rect" id="node3" href="$_game_world_8h.html" title="src/GameWorld.h" alt="" coords="211,80,335,107"/>
-<area shape="rect" id="node4" href="$_game_world_8cc.html" title="src/GameWorld.cc" alt="" coords="140,155,271,181"/>
-<area shape="rect" id="node5" href="$main_8cc.html" title="src/main.cc" alt="" coords="295,155,385,181"/>
+<area shape="rect" id="node2" href="$_game_asset_manager_8cc.html" title="src/GameAssetManager.cc" alt="" coords="35,80,216,107"/>
+<area shape="rect" id="node3" href="$_game_world_8h.html" title="src/GameWorld.h" alt="" coords="241,80,365,107"/>
+<area shape="rect" id="node6" href="$_python_bindings_8cc.html" title="src/PythonBindings.cc" alt="" coords="275,155,429,181"/>
+<area shape="rect" id="node7" href="$_python_bindings_8h.html" title="src/PythonBindings.h" alt="" coords="453,155,600,181"/>
+<area shape="rect" id="node4" href="$_game_world_8cc.html" title="src/GameWorld.cc" alt="" coords="5,155,136,181"/>
+<area shape="rect" id="node5" href="$main_8cc.html" title="src/main.cc" alt="" coords="160,155,251,181"/>
 </map>
