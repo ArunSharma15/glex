@@ -3,6 +3,13 @@
 
 #include <vector>
 
+#ifdef _APPLE_
+#include <OpenGL/gl.h>
+#else
+
+#include <GL/gl.h>
+#endif
+
 #include <GL/gl.h>
 #include <glm/glm.hpp>
 #include <glm/ext.hpp>
