@@ -1,3 +1,3 @@
 import libhydra
 
-bindtest
+libhydra.bindtest
