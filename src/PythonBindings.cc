@@ -13,5 +13,8 @@ BOOST_PYTHON_MODULE(glex){
 
 	class_<GameWorld>("GameWorld")
 		.def("bindtest",&GameWorld::bindtest)
-		
+
+
+		class_<GameWorld>("GameWorld")
+		.def("bindtesttwo",&GameWorld::bindtest)
 }
