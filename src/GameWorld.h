@@ -35,6 +35,8 @@ class GameWorld {
   
   void bindtest();
   
+  void bindtesttwo();
+  
  private:
   std::shared_ptr<GameAssetManager> asset_manager;
 };

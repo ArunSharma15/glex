@@ -83,6 +83,10 @@ void GameWorld::bindtest(){
 	cout << "Method 'bindtest' succesfully called" << endl;
 }
 
+void GameWorld::bindtesttwo(){
+	cout << "Method 'bindtest2' succesfully called" << endl;
+}
+
 void GameWorld::Draw() {
   
   asset_manager->Draw();
