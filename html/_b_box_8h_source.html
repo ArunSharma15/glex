@@ -47,6 +47,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -110,29 +111,32 @@ $(document).ready(function(){initNavTree('_b_box_8h_source.html','');});
 <a href="_b_box_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef BBox_H</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define BBox_H</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div>
-<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="class_b_box.html">    5</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_b_box.html">BBox</a></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;{</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    </div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;std::shared_ptr&lt;glm::   </div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="class_b_box.html">    8</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_b_box.html">BBox</a></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;{</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    </div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    </div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    </div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;public: </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">public</span>: </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<a class="code" href="class_b_box.html">BBox</a>();</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">virtual</span> ~<a class="code" href="class_b_box.html"> BBox</a>();</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keywordtype">void</span> translate(glm::vec3);</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    </div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;};</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="class_b_box_html"><div class="ttname"><a href="class_b_box.html">BBox</a></div><div class="ttdef"><b>Definition:</b> <a href="_b_box_8h_source.html#l00005">BBox.h:5</a></div></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<a class="code" href="class_b_box.html#a71c270367d3da5e33fd57633b363053b">BBox</a>(                       glm::vec3 x_y_z_pos, </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;                            glm::vec3 <a class="code" href="class_b_box.html#a82ef48b47a3c823a8cee9afa171dba2c">translate</a>, </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;                            glm::vec3 animate, </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;                            glm::vec3 rotate,</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;                            glm::vec3 scale);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">virtual</span> <a class="code" href="class_b_box.html#acba318726fe0da14cd8424b49d477c7b">~ BBox</a>();</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_b_box.html#a82ef48b47a3c823a8cee9afa171dba2c">translate</a>(glm::vec3);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;};</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="class_b_box_html_a71c270367d3da5e33fd57633b363053b"><div class="ttname"><a href="class_b_box.html#a71c270367d3da5e33fd57633b363053b">BBox::BBox</a></div><div class="ttdeci">BBox(glm::vec3 x_y_z_pos, glm::vec3 translate, glm::vec3 animate, glm::vec3 rotate, glm::vec3 scale)</div></div>
+<div class="ttc" id="class_b_box_html_acba318726fe0da14cd8424b49d477c7b"><div class="ttname"><a href="class_b_box.html#acba318726fe0da14cd8424b49d477c7b">BBox::~BBox</a></div><div class="ttdeci">virtual ~BBox()</div></div>
+<div class="ttc" id="class_b_box_html"><div class="ttname"><a href="class_b_box.html">BBox</a></div><div class="ttdef"><b>Definition:</b> <a href="_b_box_8h_source.html#l00008">BBox.h:8</a></div></div>
+<div class="ttc" id="class_b_box_html_a82ef48b47a3c823a8cee9afa171dba2c"><div class="ttname"><a href="class_b_box.html#a82ef48b47a3c823a8cee9afa171dba2c">BBox::translate</a></div><div class="ttdeci">void translate(glm::vec3)</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

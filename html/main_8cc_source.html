@@ -47,6 +47,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -286,53 +287,52 @@ $(document).ready(function(){initNavTree('main_8cc_source.html','');});
 <div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    <span class="keywordflow">case</span> SDL_QUIT:</div>
 <div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;      SDL_Quit();</div>
 <div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;      <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;                </div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    <span class="keywordflow">case</span> SDL_USEREVENT:</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        SDL_GetRelativeMouseState(&amp;mouseX, &amp;mouseY);</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;            </div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        keyboard_state = SDL_GetKeyboardState(NULL);</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;        </div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        <span class="keywordflow">if</span>(keyboard_state[SDL_SCANCODE_A])</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        {</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        input_direction = <a class="code" href="common_8h.html#a080a822f0093973313bd644e517a5090adb45120aafd37a973140edee24708065">LEFT</a>;</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        </div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        }</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span>(keyboard_state[SDL_SCANCODE_S])</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;            {</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;            input_direction = <a class="code" href="common_8h.html#a080a822f0093973313bd644e517a5090a9b0b4a95b99523966e0e34ffdadac9da">DOWN</a>;</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;            }</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;                <span class="keywordflow">else</span> <span class="keywordflow">if</span>(keyboard_state[SDL_SCANCODE_W])</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;                {</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;                input_direction = <a class="code" href="common_8h.html#a080a822f0093973313bd644e517a5090aba595d8bca8bc5e67c37c0a9d89becfa">UP</a>;</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;                }</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;                    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(keyboard_state[SDL_SCANCODE_D])</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;                    {</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;                    input_direction = <a class="code" href="common_8h.html#a080a822f0093973313bd644e517a5090aec8379af7490bb9eaaf579cf17876f38">RIGHT</a>;</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;                    </div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;                    }</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;                        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(keyboard_state[SDL_SCANCODE_ESCAPE])</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;                        {</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;                        SDL_Quit();</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;                        }</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;                            <span class="keywordflow">else</span>{</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;                            input_direction = <a class="code" href="common_8h.html#a080a822f0093973313bd644e517a5090ad2625e4f5268d590b842108adccf8ab6">NILL</a>;</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;                            }</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;                                game_world-&gt;UpdateCameraPosition(input_direction,mouseX,mouseY);</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;                                 </div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;                                <a class="code" href="main_8cc.html#afd34c13fc4f409851ffc0989c13dd287">Draw</a>(window,game_world);</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;                                </div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;                                <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;                            </div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    </div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;      }</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    }</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;  }</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;     <span class="comment">// game_world-&gt;UpdateCameraPosition(input_direction,mouseX,mouseY);</span></div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;     <span class="comment">// Draw(window, game_world);  </span></div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    <span class="keywordflow">case</span> SDL_USEREVENT:</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;        SDL_GetRelativeMouseState(&amp;mouseX, &amp;mouseY);</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;            </div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        keyboard_state = SDL_GetKeyboardState(NULL);</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        </div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        <span class="keywordflow">if</span>(keyboard_state[SDL_SCANCODE_A])</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        {</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        input_direction = <a class="code" href="common_8h.html#a080a822f0093973313bd644e517a5090adb45120aafd37a973140edee24708065">LEFT</a>;</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        </div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        }</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span>(keyboard_state[SDL_SCANCODE_S])</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;            {</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;            input_direction = <a class="code" href="common_8h.html#a080a822f0093973313bd644e517a5090a9b0b4a95b99523966e0e34ffdadac9da">DOWN</a>;</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;            }</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;                <span class="keywordflow">else</span> <span class="keywordflow">if</span>(keyboard_state[SDL_SCANCODE_W])</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;                {</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;                input_direction = <a class="code" href="common_8h.html#a080a822f0093973313bd644e517a5090aba595d8bca8bc5e67c37c0a9d89becfa">UP</a>;</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;                }</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;                    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(keyboard_state[SDL_SCANCODE_D])</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;                    {</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;                    input_direction = <a class="code" href="common_8h.html#a080a822f0093973313bd644e517a5090aec8379af7490bb9eaaf579cf17876f38">RIGHT</a>;</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;                    </div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;                    }</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;                        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(keyboard_state[SDL_SCANCODE_ESCAPE])</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;                        {</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;                        SDL_Quit();</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;                        }</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;                            <span class="keywordflow">else</span>{</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;                            input_direction = <a class="code" href="common_8h.html#a080a822f0093973313bd644e517a5090ad2625e4f5268d590b842108adccf8ab6">NILL</a>;</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;                            }</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;                                game_world-&gt;UpdateCameraPosition(input_direction,mouseX,mouseY);</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;                                 </div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;                                <a class="code" href="main_8cc.html#afd34c13fc4f409851ffc0989c13dd287">Draw</a>(window,game_world);</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;                                </div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;                                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;                            </div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    </div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;      }</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    }</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;  }</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;     <span class="comment">// game_world-&gt;UpdateCameraPosition(input_direction,mouseX,mouseY);</span></div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;     <span class="comment">// Draw(window, game_world);  </span></div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;</div>
 <div class="ttc" id="common_8h_html_a080a822f0093973313bd644e517a5090ad2625e4f5268d590b842108adccf8ab6"><div class="ttname"><a href="common_8h.html#a080a822f0093973313bd644e517a5090ad2625e4f5268d590b842108adccf8ab6">NILL</a></div><div class="ttdef"><b>Definition:</b> <a href="common_8h_source.html#l00013">common.h:13</a></div></div>
 <div class="ttc" id="common_8h_html_add86e7c88dd109abea3f708b422f31f0a593be05a10070b4e7e0856e20590eaaf"><div class="ttname"><a href="common_8h.html#add86e7c88dd109abea3f708b422f31f0a593be05a10070b4e7e0856e20590eaaf">SCALE</a></div><div class="ttdef"><b>Definition:</b> <a href="common_8h_source.html#l00012">common.h:12</a></div></div>
 <div class="ttc" id="common_8h_html_a080a822f0093973313bd644e517a5090"><div class="ttname"><a href="common_8h.html#a080a822f0093973313bd644e517a5090">Input</a></div><div class="ttdeci">Input</div><div class="ttdef"><b>Definition:</b> <a href="common_8h_source.html#l00013">common.h:13</a></div></div>

@@ -31,6 +31,13 @@ Collaboration diagram for Pyramid\+Asset\+:\nopagebreak
 \item 
 virtual void \hyperlink{class_pyramid_asset_aaea45da4956d79ec9ab96e9d0ccef3fe}{Draw} (G\+Luint)
 \end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+glm\+::mat4 \hyperlink{class_pyramid_asset_aa261d31a01a327a581604d199c73de13}{ani}
+\item 
+G\+Lfloat \hyperlink{class_pyramid_asset_afc05567a64280648f735bf33da5ca345}{angle}
+\end{DoxyCompactItemize}
 \subsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -54,7 +61,7 @@ G\+Luint \hyperlink{class_pyramid_asset_a1c82b429f52d92feefacb5755017aec0}{colou
 \subsection{Detailed Description}
 Pyramid Asset Class -\/ Resonsible for storing structure of Cube class and drawing. 
 
-Definition at line 16 of file Pyramid\+Asset.\+h.
+Definition at line 22 of file Pyramid\+Asset.\+h.
 
 
 
@@ -119,40 +126,54 @@ Definition at line 99 of file Pyramid\+Asset.\+cc.
 
 
 \subsection{Member Data Documentation}
+\hypertarget{class_pyramid_asset_afc05567a64280648f735bf33da5ca345}{}\index{Pyramid\+Asset@{Pyramid\+Asset}!angle@{angle}}
+\index{angle@{angle}!Pyramid\+Asset@{Pyramid\+Asset}}
+\subsubsection[{angle}]{\setlength{\rightskip}{0pt plus 5cm}G\+Lfloat Pyramid\+Asset\+::angle}\label{class_pyramid_asset_afc05567a64280648f735bf33da5ca345}
+
+
+Definition at line 28 of file Pyramid\+Asset.\+h.
+
+\hypertarget{class_pyramid_asset_aa261d31a01a327a581604d199c73de13}{}\index{Pyramid\+Asset@{Pyramid\+Asset}!ani@{ani}}
+\index{ani@{ani}!Pyramid\+Asset@{Pyramid\+Asset}}
+\subsubsection[{ani}]{\setlength{\rightskip}{0pt plus 5cm}glm\+::mat4 Pyramid\+Asset\+::ani}\label{class_pyramid_asset_aa261d31a01a327a581604d199c73de13}
+
+
+Definition at line 27 of file Pyramid\+Asset.\+h.
+
 \hypertarget{class_pyramid_asset_addd87a747d7bd186bd1b3e3070185c69}{}\index{Pyramid\+Asset@{Pyramid\+Asset}!colour\+\_\+buffer\+\_\+length@{colour\+\_\+buffer\+\_\+length}}
 \index{colour\+\_\+buffer\+\_\+length@{colour\+\_\+buffer\+\_\+length}!Pyramid\+Asset@{Pyramid\+Asset}}
 \subsubsection[{colour\+\_\+buffer\+\_\+length}]{\setlength{\rightskip}{0pt plus 5cm}G\+Luint Pyramid\+Asset\+::colour\+\_\+buffer\+\_\+length\hspace{0.3cm}{\ttfamily [private]}}\label{class_pyramid_asset_addd87a747d7bd186bd1b3e3070185c69}
 Create a uniformly coloured cube, which means fill in all the triangles with the same R\+G\+B value. 
 
-Definition at line 24 of file Pyramid\+Asset.\+h.
+Definition at line 32 of file Pyramid\+Asset.\+h.
 
 \hypertarget{class_pyramid_asset_a1c82b429f52d92feefacb5755017aec0}{}\index{Pyramid\+Asset@{Pyramid\+Asset}!colour\+\_\+buffer\+\_\+token@{colour\+\_\+buffer\+\_\+token}}
 \index{colour\+\_\+buffer\+\_\+token@{colour\+\_\+buffer\+\_\+token}!Pyramid\+Asset@{Pyramid\+Asset}}
 \subsubsection[{colour\+\_\+buffer\+\_\+token}]{\setlength{\rightskip}{0pt plus 5cm}G\+Luint Pyramid\+Asset\+::colour\+\_\+buffer\+\_\+token\hspace{0.3cm}{\ttfamily [private]}}\label{class_pyramid_asset_a1c82b429f52d92feefacb5755017aec0}
 
 
-Definition at line 28 of file Pyramid\+Asset.\+h.
+Definition at line 36 of file Pyramid\+Asset.\+h.
 
 \hypertarget{class_pyramid_asset_a5566105859271b493eab3b5f9c02f866}{}\index{Pyramid\+Asset@{Pyramid\+Asset}!element\+\_\+buffer\+\_\+length@{element\+\_\+buffer\+\_\+length}}
 \index{element\+\_\+buffer\+\_\+length@{element\+\_\+buffer\+\_\+length}!Pyramid\+Asset@{Pyramid\+Asset}}
 \subsubsection[{element\+\_\+buffer\+\_\+length}]{\setlength{\rightskip}{0pt plus 5cm}G\+Luint Pyramid\+Asset\+::element\+\_\+buffer\+\_\+length\hspace{0.3cm}{\ttfamily [private]}}\label{class_pyramid_asset_a5566105859271b493eab3b5f9c02f866}
 Create triangles for each face of the pyramid, 3 vertex points create a triangle, 2 triangles for the pyramid square base + 4 to form apex. 
 
-Definition at line 23 of file Pyramid\+Asset.\+h.
+Definition at line 31 of file Pyramid\+Asset.\+h.
 
 \hypertarget{class_pyramid_asset_a6f7e2f50904d2941e33df8eb7f5f9c2d}{}\index{Pyramid\+Asset@{Pyramid\+Asset}!element\+\_\+buffer\+\_\+token@{element\+\_\+buffer\+\_\+token}}
 \index{element\+\_\+buffer\+\_\+token@{element\+\_\+buffer\+\_\+token}!Pyramid\+Asset@{Pyramid\+Asset}}
 \subsubsection[{element\+\_\+buffer\+\_\+token}]{\setlength{\rightskip}{0pt plus 5cm}G\+Luint Pyramid\+Asset\+::element\+\_\+buffer\+\_\+token\hspace{0.3cm}{\ttfamily [private]}}\label{class_pyramid_asset_a6f7e2f50904d2941e33df8eb7f5f9c2d}
 
 
-Definition at line 25 of file Pyramid\+Asset.\+h.
+Definition at line 33 of file Pyramid\+Asset.\+h.
 
 \hypertarget{class_pyramid_asset_a54d9cec42bc77d07a66e6c1cd55049b0}{}\index{Pyramid\+Asset@{Pyramid\+Asset}!vertex\+\_\+buffer\+\_\+token@{vertex\+\_\+buffer\+\_\+token}}
 \index{vertex\+\_\+buffer\+\_\+token@{vertex\+\_\+buffer\+\_\+token}!Pyramid\+Asset@{Pyramid\+Asset}}
 \subsubsection[{vertex\+\_\+buffer\+\_\+token}]{\setlength{\rightskip}{0pt plus 5cm}G\+Luint Pyramid\+Asset\+::vertex\+\_\+buffer\+\_\+token\hspace{0.3cm}{\ttfamily [private]}}\label{class_pyramid_asset_a54d9cec42bc77d07a66e6c1cd55049b0}
 Resonsible for storing vertices of the pyramid. 
 
-Definition at line 26 of file Pyramid\+Asset.\+h.
+Definition at line 34 of file Pyramid\+Asset.\+h.
 
 
 

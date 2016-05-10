@@ -1,6 +1,6 @@
 var annotated_dup =
 [
-    [ "BBox", "class_b_box.html", null ],
+    [ "BBox", "class_b_box.html", "class_b_box" ],
     [ "Camera", "class_camera.html", "class_camera" ],
     [ "CubeAsset", "class_cube_asset.html", "class_cube_asset" ],
     [ "GameAsset", "class_game_asset.html", "class_game_asset" ],

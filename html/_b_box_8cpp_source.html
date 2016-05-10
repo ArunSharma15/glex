@@ -47,6 +47,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -110,20 +111,36 @@ $(document).ready(function(){initNavTree('_b_box_8cpp_source.html','');});
 <a href="_b_box_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &lt;glm/glm.hpp&gt;</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_b_box_8h.html">BBox.h</a>&quot;</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
-<div class="line"><a name="l00004"></a><span class="lineno"><a class="line" href="_b_box_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">    4</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="_b_box_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>()</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;{</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    </div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;glm::mat4 model_matrix(1.0);</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;glm::vec3 t(1.0,1.0,1.0);</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;Bbox 1();</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;b1.translate();</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;b1.scale(1.0,2.0,3.0);</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;b1.rotateX(0.25);</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;b1.rotateY(0.25);</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;b1.rotateZ(0.25);</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    </div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;}</div>
-<div class="ttc" id="_b_box_8cpp_html_ae66f6b31b5ad750f1fe042a706a4e3d4"><div class="ttname"><a href="_b_box_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a></div><div class="ttdeci">int main()</div><div class="ttdef"><b>Definition:</b> <a href="_b_box_8cpp_source.html#l00004">BBox.cpp:4</a></div></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;Bbox::Bbox(                 glm::vec3 x_y_z_pos,</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;                            glm::vec3 translate, </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;                            glm::vec3 animate, </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;                            glm::vec3 rotate,</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;                            glm::vec3 scale)</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;{</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    Bbox::translate(glm::vec3 translate){</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        scale = scale +  glm::vec3(0.5f,0.5f,0.1f);</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    }</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    Bbox::scale(glm::vec3 scale){</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    scale = scale +  glm::vec3(0.5f,0.5f,0.1f);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    }   </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    Bboxx::pos(glm::vec3 x_y_z_pos){</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    x_y_z_pos = x_y_z_pos +  glm::vec3(0.5f,0.5f,0.1f);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    }</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;}</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
 <div class="ttc" id="_b_box_8h_html"><div class="ttname"><a href="_b_box_8h.html">BBox.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

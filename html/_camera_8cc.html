@@ -47,6 +47,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -103,6 +104,9 @@ $(document).ready(function(){initNavTree('_camera_8cc.html','');});
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">Camera.cc File Reference</div>  </div>
 </div><!--header-->
@@ -120,6 +124,138 @@ Include dependency graph for Camera.cc:</div>
 </div>
 </div>
 <p><a href="_camera_8cc_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:aa2a220598df16b05f96127b4f0a4b977"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_camera_8cc.html#aa2a220598df16b05f96127b4f0a4b977">if</a> ((verticalAngle+(0.01 *<a class="el" href="_camera_8cc.html#ad3a61bcb15b2def0086d7db8b2b513c8">mouseDeltaY</a>))&lt; 1 &amp;&amp;(verticalAngle+(0.01 *<a class="el" href="_camera_8cc.html#ad3a61bcb15b2def0086d7db8b2b513c8">mouseDeltaY</a>))-1)</td></tr>
+<tr class="separator:aa2a220598df16b05f96127b4f0a4b977"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63901d485b0b6bcec31ce0bc60f8a3af"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_camera_8cc.html#a63901d485b0b6bcec31ce0bc60f8a3af">if</a> (input_Direction==<a class="el" href="common_8h.html#a080a822f0093973313bd644e517a5090aba595d8bca8bc5e67c37c0a9d89becfa">UP</a>)</td></tr>
+<tr class="separator:a63901d485b0b6bcec31ce0bc60f8a3af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:ad3a61bcb15b2def0086d7db8b2b513c8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_camera_8cc.html#ad3a61bcb15b2def0086d7db8b2b513c8">mouseDeltaY</a> = -mouseY</td></tr>
+<tr class="separator:ad3a61bcb15b2def0086d7db8b2b513c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3febfe12a8fce6f60df2c7eb933a2b19"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_camera_8cc.html#a3febfe12a8fce6f60df2c7eb933a2b19">horizontalAngle</a> = 0.01 * mouseDeltaX</td></tr>
+<tr class="separator:a3febfe12a8fce6f60df2c7eb933a2b19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99f26e6ee9fcd62f75203b5402df8098"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_camera_8cc.html#a99f26e6ee9fcd62f75203b5402df8098">direction</a> = glm::vec3(cos(verticalAngle) * sin(<a class="el" href="_camera_8cc.html#a3febfe12a8fce6f60df2c7eb933a2b19">horizontalAngle</a>),sin(verticalAngle),cos(verticalAngle) * cos(<a class="el" href="_camera_8cc.html#a3febfe12a8fce6f60df2c7eb933a2b19">horizontalAngle</a>))</td></tr>
+<tr class="separator:a99f26e6ee9fcd62f75203b5402df8098"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25331d5f9601b8cb1ce57490930d7c01"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_camera_8cc.html#a25331d5f9601b8cb1ce57490930d7c01">right</a> = glm::vec3(sin(<a class="el" href="_camera_8cc.html#a3febfe12a8fce6f60df2c7eb933a2b19">horizontalAngle</a> - 3.14/2.0f),0,cos(horizontalAngle - 3.14/2.0f))</td></tr>
+<tr class="separator:a25331d5f9601b8cb1ce57490930d7c01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1df03026db3aa663afda0c9eed67408e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_camera_8cc.html#a1df03026db3aa663afda0c9eed67408e">up</a> = glm::cross(<a class="el" href="_camera_8cc.html#a25331d5f9601b8cb1ce57490930d7c01">right</a>,<a class="el" href="_camera_8cc.html#a99f26e6ee9fcd62f75203b5402df8098">direction</a>)</td></tr>
+<tr class="separator:a1df03026db3aa663afda0c9eed67408e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="aa2a220598df16b05f96127b4f0a4b977"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">if </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_camera_8cc_source.html#l00032">32</a> of file <a class="el" href="_camera_8cc_source.html">Camera.cc</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a63901d485b0b6bcec31ce0bc60f8a3af"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">else if </td>
+          <td>(</td>
+          <td class="paramtype">input_Direction&#160;</td>
+          <td class="paramname"> = <code>=&#160;<a class="el" href="common_8h.html#a080a822f0093973313bd644e517a5090aba595d8bca8bc5e67c37c0a9d89becfa">UP</a></code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_camera_8cc_source.html#l00043">43</a> of file <a class="el" href="_camera_8cc_source.html">Camera.cc</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a class="anchor" id="a99f26e6ee9fcd62f75203b5402df8098"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">direction = glm::vec3(cos(verticalAngle) * sin(<a class="el" href="_camera_8cc.html#a3febfe12a8fce6f60df2c7eb933a2b19">horizontalAngle</a>),sin(verticalAngle),cos(verticalAngle) * cos(<a class="el" href="_camera_8cc.html#a3febfe12a8fce6f60df2c7eb933a2b19">horizontalAngle</a>))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Manipulations that will be stored in variables - to be called depending on what keyboard input is used. </p>
+
+<p>Definition at line <a class="el" href="_camera_8cc_source.html#l00037">37</a> of file <a class="el" href="_camera_8cc_source.html">Camera.cc</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3febfe12a8fce6f60df2c7eb933a2b19"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">horizontalAngle = 0.01 * mouseDeltaX</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_camera_8cc_source.html#l00030">30</a> of file <a class="el" href="_camera_8cc_source.html">Camera.cc</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad3a61bcb15b2def0086d7db8b2b513c8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">mouseDeltaY = -mouseY</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Designed to take in mouseX and Y as well the keyboard input (WASD) and modify matrices. glm::mat4 <a class="el" href="class_camera.html#ac0f7e4d6a41e3b425eed9cfa392a9508">Camera::UpdateCameraPosition(Input input_Direction, int mouseX, int mouseY)</a> </p>
+
+<p>Definition at line <a class="el" href="_camera_8cc_source.html#l00028">28</a> of file <a class="el" href="_camera_8cc_source.html">Camera.cc</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a25331d5f9601b8cb1ce57490930d7c01"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">right = glm::vec3(sin(<a class="el" href="_camera_8cc.html#a3febfe12a8fce6f60df2c7eb933a2b19">horizontalAngle</a> - 3.14/2.0f),0,cos(horizontalAngle - 3.14/2.0f))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Manipulations that will be stored in variables - to be called depending on what keyboard input is used. </p>
+
+<p>Definition at line <a class="el" href="_camera_8cc_source.html#l00039">39</a> of file <a class="el" href="_camera_8cc_source.html">Camera.cc</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1df03026db3aa663afda0c9eed67408e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">up = glm::cross(<a class="el" href="_camera_8cc.html#a25331d5f9601b8cb1ce57490930d7c01">right</a>,<a class="el" href="_camera_8cc.html#a99f26e6ee9fcd62f75203b5402df8098">direction</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Manipulations that will be stored in variables - to be called depending on what keyboard input is used. </p>
+
+<p>Definition at line <a class="el" href="_camera_8cc_source.html#l00041">41</a> of file <a class="el" href="_camera_8cc_source.html">Camera.cc</a>.</p>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

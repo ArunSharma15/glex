@@ -47,6 +47,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -105,16 +106,116 @@ $(document).ready(function(){initNavTree('class_b_box.html','');});
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="class_b_box-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">BBox Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="_b_box_8h_source.html">BBox.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a71c270367d3da5e33fd57633b363053b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_box.html#a71c270367d3da5e33fd57633b363053b">BBox</a> (glm::vec3 x_y_z_pos, glm::vec3 <a class="el" href="class_b_box.html#a82ef48b47a3c823a8cee9afa171dba2c">translate</a>, glm::vec3 animate, glm::vec3 rotate, glm::vec3 scale)</td></tr>
+<tr class="separator:a71c270367d3da5e33fd57633b363053b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acba318726fe0da14cd8424b49d477c7b"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_box.html#acba318726fe0da14cd8424b49d477c7b">~BBox</a> ()</td></tr>
+<tr class="separator:acba318726fe0da14cd8424b49d477c7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82ef48b47a3c823a8cee9afa171dba2c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_box.html#a82ef48b47a3c823a8cee9afa171dba2c">translate</a> (glm::vec3)</td></tr>
+<tr class="separator:a82ef48b47a3c823a8cee9afa171dba2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p>Definition at line <a class="el" href="_b_box_8h_source.html#l00005">5</a> of file <a class="el" href="_b_box_8h_source.html">BBox.h</a>.</p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+<div class="textblock"><p>A simple attempt at creating a bounding box class Designed to take in game assets and manipulate them. </p>
+
+<p>Definition at line <a class="el" href="_b_box_8h_source.html#l00008">8</a> of file <a class="el" href="_b_box_8h_source.html">BBox.h</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a71c270367d3da5e33fd57633b363053b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BBox::BBox </td>
+          <td>(</td>
+          <td class="paramtype">glm::vec3&#160;</td>
+          <td class="paramname"><em>x_y_z_pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">glm::vec3&#160;</td>
+          <td class="paramname"><em>translate</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">glm::vec3&#160;</td>
+          <td class="paramname"><em>animate</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">glm::vec3&#160;</td>
+          <td class="paramname"><em>rotate</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">glm::vec3&#160;</td>
+          <td class="paramname"><em>scale</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>This constructor is designed to take in and eventually send mat4s </p>
+
+</div>
+</div>
+<a class="anchor" id="acba318726fe0da14cd8424b49d477c7b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual BBox::~BBox </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a82ef48b47a3c823a8cee9afa171dba2c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BBox::translate </td>
+          <td>(</td>
+          <td class="paramtype">glm::vec3&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>src/<a class="el" href="_b_box_8h_source.html">BBox.h</a></li>
 </ul>
 </div><!-- contents -->

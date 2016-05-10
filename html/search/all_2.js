@@ -1,7 +1,7 @@
 var searchData=
 [
   ['cam',['cam',['../_game_asset_manager_8cc.html#af5a10609f4013f8e9b1ca2813ed8f526',1,'GameAssetManager.cc']]],
-  ['camera',['Camera',['../class_camera.html',1,'Camera'],['../class_game_asset_manager.html#af408912d75b4d97d29babc8850ecb8ae',1,'GameAssetManager::camera()'],['../class_camera.html#a01f94c3543f56ede7af49dc778f19331',1,'Camera::Camera()']]],
+  ['camera',['Camera',['../class_camera.html',1,'Camera'],['../class_camera.html#a01f94c3543f56ede7af49dc778f19331',1,'Camera::Camera()'],['../class_game_asset_manager.html#af408912d75b4d97d29babc8850ecb8ae',1,'GameAssetManager::camera()']]],
   ['camera_2ecc',['Camera.cc',['../_camera_8cc.html',1,'']]],
   ['camera_2eh',['Camera.h',['../_camera_8h.html',1,'']]],
   ['cameramovementspeed',['cameraMovementSpeed',['../class_camera.html#a0ca21737f5a9fb6a9fda61e7e92c9a5e',1,'Camera']]],
